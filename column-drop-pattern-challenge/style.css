@@ -1,0 +1,38 @@
+body{
+    background-color: #efefef;;
+}
+.navStyle{
+    background-color: white;
+    color:#6a6666 ;
+}
+.a{
+    color:#6a6666 ;
+}
+h1{
+    padding: 5vw 0;
+    font-weight: bold;
+    font-size: 4vw;  
+}
+.topP{
+    color: #6a6666;
+    font-size: 1.5vw;
+}
+.btnStyle{
+    margin-top:  7vh;
+}
+.footerStyle{
+    padding: 3vh;
+    text-align: center;
+    background-color: #bc3737;;
+    color: white;  
+}
+.imgBox{
+    float: right;
+    width: 6vw;
+}
+.space{
+    margin-top: 10vh;
+}
+.m-5{
+    margin: 1rem !important;
+}
