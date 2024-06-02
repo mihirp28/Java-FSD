@@ -1,0 +1,81 @@
+{
+  "metrics": [
+    {
+      "title": "Total CPU Cores",
+      "value": "128",
+      "cols": 2,
+      "rows": 2,
+      "id": 1
+    },
+    {
+      "title": "Total Memory",
+      "value": "256 GB",
+      "cols": 1,
+      "rows": 2,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Total Nodes",
+      "value": "8",
+      "cols": 1,
+      "rows": 2
+    },
+    {
+      "id": 4,
+      "title": "CPU Utilization",
+      "value": "55%",
+      "cols": 1,
+      "rows": 2
+    },
+    {
+      "title": "Memory Utilization",
+      "value": "45%",
+      "cols": 1,
+      "rows": 2,
+      "id": 5
+    },
+    {
+      "title": "Disk Utilization",
+      "value": "60%",
+      "cols": 2,
+      "rows": 2,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "title": "Load Average",
+      "value": "8",
+      "cols": 1,
+      "rows": 2
+    },
+    {
+      "id": 7,
+      "title": "Node Disk Utilization",
+      "value": "30%",
+      "cols": 2,
+      "rows": 2
+    },
+    {
+      "title": "Node CPU Utilization",
+      "value": "65%",
+      "cols": 2,
+      "rows": 2,
+      "id": 8
+    },
+    {
+      "title": "New Title",
+      "value": "69",
+      "cols": "1",
+      "rows": 2,
+      "id": 9
+    },
+    {
+      "title": "New meteric test",
+      "value": "128",
+      "cols": 2,
+      "rows": 2,
+      "id": 10
+    }
+  ]
+}
