@@ -1,0 +1,36 @@
+
+//premitive type
+
+
+// 8bits  16 bits 32 bits 64bits
+// byte , short , int , long -> pure integer values
+
+//float ,double -> decimal values
+//char -> single character number or special symbol or alphabet 
+//boolean -> true / false
+
+
+import java.util.Scanner;
+
+public class MySecondCode {
+	
+	public static void main(String[] args) {
+	
+	
+		 float x=(float)10.5;	// explicit cast (double to float)	
+		System.out.println(x);
+		
+		
+		 float x1=10.5f;	//explicit cast	
+		System.out.println(x1);
+			
+		
+		double d=15.5;
+		System.out.println(d);
+		//compiler read decimal as double by default
+		
+		
+	}
+	
+
+}

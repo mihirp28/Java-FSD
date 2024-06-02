@@ -1,0 +1,32 @@
+
+//premitive type
+
+// byte , short , int , long -> pure integer values
+//float ,double -> decimal values
+//char -> single character number or special symbol or alphabet 
+//boolean -> true / false
+
+
+import java.util.Scanner;
+
+public class MySecondCode {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter dollar value to convert it in rupees");
+		
+		int dollar=sc.nextInt();
+		
+		int rupees=76*dollar;
+		
+		
+		System.out.println( rupees + "rs");
+		
+		// + can be used for concatination or addition
+		
+		
+	}
+
+}

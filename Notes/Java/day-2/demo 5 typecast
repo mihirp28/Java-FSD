@@ -1,0 +1,77 @@
+
+//premitive type
+
+
+// 8bits  16 bits 32 bits 64bits
+// byte , short , int , long -> pure integer values
+
+//float ,double -> decimal values
+//char -> single character number or special symbol or alphabet 
+//boolean -> true / false
+
+
+import java.util.Scanner;
+
+public class MySecondCode {
+	
+	public static void main(String[] args) {
+	
+		//Variable name given to memory
+		//	mobileNumber
+	
+		//byte mobileNumber=9988776655;
+		//short mobileNumber=9988776655;
+		
+		//int mobileNumber=9988776655;
+	
+		//long mobileNumber=9988776655L;
+	
+		
+		//age
+		
+		//byte age=110;
+		//short age=110;
+	
+		//byte x=255;
+		
+		//byte x=128;
+		
+		
+		//byte x=-10;
+		//System.out.println(x);
+		
+		byte x=-128;
+		System.out.println(x);
+	
+		int mobileNum=1477889955;
+	
+	//type casting-> conversions of one type of data to another 
+	
+		byte a=101;
+		byte b=a;
+		
+		
+		System.out.println(b);
+	
+		short c=a; // casting -> implicit -compiler cast 
+		System.out.println("c = "+c);
+		
+	
+		short d=15;
+		//byte e=d;
+		
+		byte e=(byte)d; // explicit cast - developer cast
+		System.out.println("e = "+e);
+		
+		
+		
+		short f=260;
+		byte g=(byte)f;
+		
+		System.out.println(g);
+		
+		
+	}
+	
+
+}
