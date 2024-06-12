@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --nav-color:#025a8e;
+    --font-color:#fffff9;
+    --btn-color:#34495e;
+    --bg-color:#026aa7;
+}
+#navbar{
+width: 261.4vh;
+height: 3rem;
+background-color: var(--nav-color);
+color:var(--font-color) ;
+display: flex;
+flex-direction: row;
+padding: .2rem 1rem;
+justify-content:space-between;
+text-align: center;
+}
+#navbar h1{
+    vertical-align:middle;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+#navbar>#btn{
+    background-color:var(--btn-color);
+    color: var(--font-color);
+    font-weight: 800;
+    border-radius: .5rem;
+    height: 2.5rem;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 2px #999;
+}
+#navbar>#btn:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(2px);
+  }
+
+.items{
+    width: max-content;
+    background-color: var(--bg-color);
+    height: 93.2vh;
+    overflow-x: hidden;
+    overflow: scroll;
+}
+.items>h2{
+    display:inline-block;
+    margin:1rem 2rem;
+    font-family: sans-serif;
+    color: var(--font-color);
+}
+.list{
+    border-radius: .2rem;
+    background-color: #f5f5f5;
+    width: 220px;
+    height: 510px; 
+    padding :1rem 5px;
+    overflow: hidden;
+}
+.list-items{
+    width: 210px;
+    height: 480px;
+    overflow: scroll; 
+    overflow-x:hidden;
+    padding :5px 5px;
+    padding-bottom: 15px;
+    background-color: var(--font-color);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+ border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0066a5; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nav-color); 
+}
+
+.title-style{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+
+}
+
+.lorem{
+    padding: .4rem;
+    margin :5px;
+    border-radius: .4rem;
+    background-color: rgb(223, 217, 217);
+}
+.board{
+    width: max-content;
+    overflow: scroll;
+    overflow: hidden;
+    margin:2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
