@@ -1,0 +1,13 @@
+.container-fluid {
+    background-color: rgb(53, 51, 51);
+    color: rgb(255, 255, 255);
+}
+
+.right {
+    float: right;
+    margin-right: 15%;
+}
+
+.input {
+    background-color: rgb(228, 0, 0);
+}

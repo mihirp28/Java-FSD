@@ -1,0 +1,261 @@
+<div class="container-fluid">
+    <h1>Video Details</h1>
+
+    <div class="right d-inline-block ">
+        <h1>Video Preview</h1>
+        <div class="card text-white bg-secondary mb-3 " style="width:90%;">
+
+            <div class="card-body">
+                <h2 class="card-title">Discription</h2>
+                <p class="card-text">Visibility-Public</p>
+                <p class="card-text">Duration-Only on Monitized Plateform</p>
+                <p class="card-text">License-Creative Common License</p>
+            </div>
+        </div>
+    </div>
+    <form class="row align-items-start col-6 d-inline-block" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+        <div class="form-group mt-5">
+            <button type="submit" class="btn btn-primary ">Save</button>
+
+            <input type="text" class="form-control mt-5 " placeholder="Video Url" name="Video_url" ngModel>
+            <input type="text" class="form-control mt-5" placeholder="Title" name="Title" ngModel>
+            <textarea class="form-control mt-5" rows="3" placeholder="Discription" name="Discription" ngModel></textarea>
+            <input type="text" class="form-control mt-5" placeholder="Video Duration" name="duration" ngModel>
+            <small class="form-text text-muted mt-5">Enter the duration in following format P </small>
+            <input type="text" class="form-control mt-5" placeholder="Channel Title" name="channel" ngModel>
+        </div>
+        <div class="mt-5">
+            <div class="form-group ">
+                <h1>Audience</h1>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="for kids" ngModel>
+                    <label class="form-check-label" for="flexRadioDefault1">
+          Yes,its made for Kids
+        </label>
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="not for kids" ngModel>
+                    <label class="form-check-label" for="flexRadioDefault1">
+          Not for kids
+        </label>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="form-group mt-2 ">
+                <h1>Age Restriction</h1>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+            Yes, Restrict my videos to viewers over 18
+      </label>
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+            No, don't restrict my videos to viewers over 18
+      </label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>Tags</p>
+
+        </div>
+        <div>
+            <input class="mw-8 form-control" id="date" name="date" placeholder="Pick Date" type="date">
+
+        </div>
+        <div>
+
+            <div class="mt-5">
+                <div class="btn-group mt-2">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Video Location
+  </button>
+                    <div class="dropdown-menu dropdown-menu-right mt-2">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            License
+      </button>
+                <div class="dropdown-menu dropdown-menu ">
+                    <button class="dropdown-item" type="button">Standard Viewtube License</button>
+                    <button class="dropdown-item" type="button">Creative Common License</button>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="mt-3">
+            <div class="btn-group mt-2">
+                <button type="drop" class="btn btn-secondary dropdown-toggle mt-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Distribution
+  </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button">Everywhere</button>
+                    <button class="dropdown-item" type="button">Make this video available only on monetized platforms</button>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="mt-3">
+            <div class="btn-group mt-2">
+                <button type="button" class="btn btn-secondary dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Video Category
+          </button>
+                <div class="dropdown-menu dropdown-menu-right mt-2">
+                    <button class="dropdown-item" type="button">Film & Animation</button>
+                    <button class="dropdown-item" type="button">Autos & Vehicles</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <div class="form-group">
+                <div class="form-check mt-2">
+                    <input class="form-check-input " type="radio" name="flexRadioDefault2" id="flexRadioDefault2">
+                    <label class="form-check-label " for="flexRadioDefault2" required>
+        Public
+  </label>
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input " type="radio" name="flexRadioDefault2" id="flexRadioDefault2">
+                    <label class="form-check-label " for="flexRadioDefault2" required>
+      Private
+  </label>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>
+
+<!-- <form class="form-horizontal" role="form" #f="ngForm" (ngSubmit)="f.form.valid && onFormSubmit()">
+
+  <h1>Video Details</h1>
+  <input type="text" [(ngModel)]="model.address" [ngClass]="{'invalid-data': address.invalid && f.submitted, 'valid-data': address.valid && f.submitted}" required name="address" #address="ngModel" placeholder="Video Url" class="form-control"><br>
+  <input type="text" [(ngModel)]="model.address" [ngClass]="{'invalid-data': address.invalid && f.submitted, 'valid-data': address.valid && f.submitted}" required name="address" #address="ngModel" placeholder="Title" class="form-control">
+  <div *ngIf="address.invalid && f.submitted">
+      <span style="color: red;">Please Enter Address.</span>
+  </div>
+  <div class="col-sm-10">
+      <select class="form-control" name="country" [(ngModel)]="model.country" #country="ngModel" [ngClass]="{'invalid-data': country.invalid && f.submitted, 'valid-data': country.valid && f.submitted}" required>
+      <option [ngValue]="null">---Select---</option>
+      <option *ngFor="let item of countryData" [value]="item">
+        {{item}}
+      </option>
+    </select>
+
+      <div *ngIf="country.invalid && f.submitted">
+          <span style="color: red;">Please Select Country.</span>
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="col-sm-2 form-check">
+          <input type="checkbox" [(ngModel)]="model.aggrement" [ngClass]="{'invalid-data': aggrement.invalid && f.submitted, 'valid-data': aggrement.valid && f.submitted}" required name="aggrement" #aggrement="ngModel" class="form-check-input">
+      </div>
+      <label class="col-sm-10 form-check-label">I aggree to Terms & Conditions
+   </label>
+  </div>
+  <div class="row">
+      <div class="col-md-4 col-md-offset-4" style="margin-top: 50px; border: 1px solid rgb(100, 98, 98); padding: 30px;">
+          <form class="form-horizontal" role="form" #f="ngForm" (ngSubmit)="f.form.valid && onFormSubmit()">
+              <fieldset>
+                  <legend>Address Details:
+                      <strong>Template Driven Form</strong>
+                  </legend>
+
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label" for="textinput">Address</label>
+                      <div class="col-sm-10">
+                          <input type="text" [(ngModel)]="model.address" [ngClass]="{'invalid-data': address.invalid && f.submitted, 'valid-data': address.valid && f.submitted}" required name="address" #address="ngModel" placeholder="Enter Address" class="form-control">
+
+                          <div *ngIf="address.invalid && f.submitted">
+                              <span style="color: red;">Please Enter Address.</span>
+                          </div>
+
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label" for="textinput">City</label>
+                      <div class="col-sm-10">
+                          <input type="text" [(ngModel)]="model.city" [ngClass]="{'invalid-data': city.invalid && f.submitted, 'valid-data': city.valid && f.submitted}" required name="city" #city="ngModel" placeholder="Enter City Name" class="form-control">
+
+                          <div *ngIf="city.invalid && f.submitted">
+                              <span style="color: red;">Please Enter City.</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label" for="textinput">State</label>
+                      <div class="col-sm-4">
+                          <input type="text" [(ngModel)]="model.state" name="state" placeholder="State" class="form-control">
+                      </div>
+
+                      <label class="col-sm-2 control-label" for="textinput">Postcode</label>
+                      <div class="col-sm-4">
+                          <input type="text" [(ngModel)]="model.postcode" [ngClass]="{'invalid-data': postcode.invalid && f.submitted, 'valid-data': postcode.valid && f.submitted}" required name="postcode" #postcode="ngModel" placeholder="Enter Post Code" class="form-control">
+
+                          <div *ngIf="postcode.invalid && f.submitted">
+                              <span style="color: red;">Please Enter Valid Post Code.</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label" for="textinput">Country</label>
+                      <div class="col-sm-10">
+                          <select class="form-control" name="country" [(ngModel)]="model.country" #country="ngModel" [ngClass]="{'invalid-data': country.invalid && f.submitted, 'valid-data': country.valid && f.submitted}" required>
+              <option [ngValue]="null">---Select---</option>
+              <option *ngFor="let item of countryData" [value]="item">
+                {{item}}
+              </option>
+            </select>
+
+                          <div *ngIf="country.invalid && f.submitted">
+                              <span style="color: red;">Please Select Country.</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-sm-2 form-check">
+                          <input type="checkbox" [(ngModel)]="model.aggrement" [ngClass]="{'invalid-data': aggrement.invalid && f.submitted, 'valid-data': aggrement.valid && f.submitted}" required name="aggrement" #aggrement="ngModel" class="form-check-input">
+                      </div>
+                      <label class="col-sm-10 form-check-label">I aggree to Terms & Conditions
+          </label>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-sm-12" *ngIf="aggrement.invalid && f.submitted">
+                          <span style="color: red;">Please Aggree with Terms & Conditions.</span>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                          <div class="pull-right">
+                              <button type="submit" class="btn btn-primary" style="margin: 4px;">Save</button>
+                              <button type="reset" class="btn btn-default">Reset</button>
+                          </div>
+                      </div>
+                  </div>
+              </fieldset>
+          </form>
+      </div>
+  </div>
+</form> -->
