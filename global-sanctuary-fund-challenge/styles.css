@@ -1,0 +1,93 @@
+body{
+    margin: 0px;
+    background-color:#f6f5f2;
+}
+#navBar{
+    background-color: #090909;
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+    color: #cccccc;
+    font-family:Roboto;
+}
+.deer{
+    float: left;
+    width: 7.5%;
+    padding: 5px;
+    margin: 5px;
+}
+.navBox{
+    float: left;
+    padding: 5px;
+    margin: 25px;
+    border: 15px;
+    text-decoration: none;
+    color: #cccccc;
+}
+.btn1{
+    font-family:Roboto;
+    color:#cccccc;
+    float: left;
+    padding: 5px;
+    margin: 25px;
+    border: 15px;
+}
+.peopleContainer{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: open sans;
+}
+.centered {
+    position: absolute;
+    top: 65%;
+    left: 7%;
+    font-size: 65px;
+}
+.missionContainer{
+    /* background-color:#f6f5f2; */
+    font-family: open sans;
+}
+.mission{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-size: x-large;
+}
+.hr-text {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 660px;
+    margin-right: 660px;
+    color: black;
+    text-align: center;  
+    font-family: Roboto;
+    font-weight: 900;
+}
+.missionImage{
+    /* background-color:#f6f5f2; */
+    float: left;
+    margin-left: 120px;
+    border-radius: 50px;
+}
+.missionText{
+    margin-left: 90 px;
+    border-radius: 50px;
+}
+figure.item {
+   
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+.caption{
+    font-size:x-large;
+    font-weight:bolder;
+    padding-top: 30px;
+    float: left;
+    margin-left: 130px;
+    display: block;  
+}
+
+
