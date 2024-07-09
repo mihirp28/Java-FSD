@@ -1,0 +1,276 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:rgb(248, 68, 104);
+    margin-top: 100px;
+}
+body div div{
+    background-color: #472222;
+    
+}
+
+body div{
+    margin: 5px;
+}
+#a1{
+      
+   
+    width: 100px;
+    height: 59px;
+    
+
+}
+#a2{
+    
+   
+    width: 100px;
+    height: 143px;
+    
+
+}
+#a3{
+    
+    
+    width: 100px;
+    height: 157px;
+    
+}
+.diva{
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#b1{
+         
+   
+    width: 100px;
+    height: 59px;
+    
+
+}
+#b2{
+    
+   
+    width: 100px;
+    height: 35px;
+    
+
+}
+#b3{
+    
+    
+    width: 100px;
+    height: 143px;
+    
+}
+#b4{
+      
+   
+    width: 100px;
+    height: 75px;
+   
+
+}
+#b5{
+    
+   
+    width: 100px;
+    height: 35px;
+    
+
+}
+#b6{
+    
+    
+    width: 100px;
+    height: 143px;
+}
+
+.divb{
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#c1{
+         
+      
+    width: 100px;
+    height: 85px;
+    
+
+}
+#c2{
+    
+   
+    width: 100px;
+    height: 140px;
+    
+
+}
+#c3{
+    
+    
+    width: 100px;
+    height: 110px;
+    
+}
+#c4{
+      
+   
+    width: 100px;
+    height: 99px;
+   
+
+}
+
+.divc{
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#d1{
+      
+      
+    width: 100px;
+    height: 100px;
+    
+
+}
+#d2{
+    
+   
+    width: 100px;
+    height: 200px;
+    
+
+}
+#d3{
+    
+    
+    width: 100px;
+    height: 190px;
+    
+}
+
+.divd{
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+#e1{
+         
+      
+    width: 100px;
+    height: 130px;
+    
+
+}
+#e2{
+    
+   
+    width: 100px;
+    height: 200px;
+    
+
+}
+#e3{
+    
+    
+    width: 100px;
+    height: 50px;
+    
+}
+#e4{
+      
+   
+    width: 100px;
+    height:  180px;
+   
+
+}
+
+.dive{
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#f1{
+         
+        
+    width: 100px;
+    height: 65px;
+    
+
+}
+#f2{
+    
+   
+    width: 100px;
+    height: 120px;
+    
+
+}
+#f3{
+    
+    
+    width: 100px;
+    height: 60px;
+    
+}
+#f4{
+      
+   
+    width: 100px;
+    height: 110px;
+   
+
+}
+#f5{
+    
+   
+    width: 100px;
+    height: 120px;
+    
+
+}
+
+.divf{
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.zoom {
+    padding: 50px;
+   
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+   
+    
+  }
+body div div:hover{
+    background-color: #ecabab;
+    
+}
