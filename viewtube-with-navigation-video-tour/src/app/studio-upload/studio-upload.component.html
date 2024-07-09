@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <a routerLink="/home" style="text-decoration: none; color: rgba(255, 255, 255, 0.863);">View Tube Studio</a>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav  #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'push' : 'side'" [opened]="true">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" style="margin-left: 5px;"><mat-icon style="text-indent: -3px;margin-top: -5px;">home</mat-icon>Home</a>
+      <a mat-list-item routerLink="upload-video"  style="margin-left: 1px;"><mat-icon style="text-indent: -2px;margin-top: -3px;">upload</mat-icon>Video Upload</a>
+      <a mat-list-item routerLink="live-Video" style="margin-left: 5px;"><mat-icon style="text-indent: -6px; margin-top: -4px;">live_tv</mat-icon>Live Video</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Add Content Here -->
+    <router-outlet>
+            
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

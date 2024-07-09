@@ -1,0 +1,62 @@
+<mat-toolbar color="primary">
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span style="font-size: 18px;">ViewTube</span>
+
+  <div style="margin-left: auto;">
+    <mat-form-field style="width:350px">
+      <input matInput placeholder="Search" style="font-size: 18px;">
+    </mat-form-field>
+  </div>
+  <button mat-icon-button matTooltip="Search">
+    <mat-icon>search</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="Audio Search">
+    <mat-icon>mic</mat-icon>
+  </button>
+  
+  <div style="margin-top: 8px; margin-left: auto;" id="icons">
+    <button mat-icon-button matTooltip="Notifications">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Create Video" routerLink="/studio-upload">
+      <mat-icon>video_call</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Apps">
+      <mat-icon>apps</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Manage Profile">
+      <mat-icon [matMenuTriggerFor]="menu">perm_identity</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item><mat-icon style="width: 10px;">settings</mat-icon>Settings</button>
+      <button mat-menu-item><mat-icon style="width: 10px;">help</mat-icon>Help</button>
+      <button mat-menu-item><mat-icon style="width: 10px;">notifications_off</mat-icon>Disable alerts</button>
+      <button mat-menu-item><mat-icon style="width: 10px;">feedback</mat-icon>Send Feedback</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav  #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'push' : 'side'" [opened]="false">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" style="margin-left: 5px;"><mat-icon style="text-indent: -3px;margin-top: -5px;">home</mat-icon>Home</a>
+      <!-- <a mat-list-item routerLink="/studio-upload" style="margin-left: 5px;"><mat-icon style="text-indent: -6px; margin-top: -4px;">logout</mat-icon>Logout</a> -->
+      <a mat-list-item href="#" style="margin-left: 5px;"><mat-icon style="text-indent: -5px;margin-top: -3px;">explore</mat-icon>Explore</a>
+      <a mat-list-item href="#" style="margin-left: 5px;"><mat-icon style="text-indent: -5px;margin-top: -3px;">subscriptions</mat-icon>Subscriptions</a>
+      <a mat-list-item href="#" style="margin-left: 5px;"><mat-icon style="text-indent: -5px;margin-top: -2px;">video_library</mat-icon>Library</a>
+      <a mat-list-item href="#" style="margin-left: 5px;"><mat-icon style="text-indent: -5px;margin-top: -3px;">history</mat-icon>History</a>
+      <hr mat-nav-list>
+      <p style="margin-left: 10%; margin-top: 20px;">Sign in to like vedios, comment, and subscribe</p>
+      <button  routerLink="/authentication/login"  >SIGN IN</button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Add Content Here -->
+    <router-outlet>
+            
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
