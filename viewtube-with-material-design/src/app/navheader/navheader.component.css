@@ -1,0 +1,72 @@
+.mat-sidenav {
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.example-center {
+    background-color: rgb(231, 36, 111);
+    color: white;
+    margin-right: 30%;
+}
+
+.mat-drawer-container {
+    background-color: rgb(63, 63, 63);
+    /* color: white;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
+}
+
+
+/* .signin{
+  color: rgb(231, 36, 111);
+  font-weight: bold;
+  font-size: larger;
+  margin: 4%;
+  width: fit-content;
+  background-color: rgb(20, 20, 20);
+  border-color: gray;
+} */
+
+.bg {
+    background-color: black;
+}
+
+.bg-1 {
+    background-color: rgb(20, 20, 20);
+}
+
+
+/* .sidenav {
+  width: 200px;
+} */
+
+
+/* .example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+} */
+
+.active-purple-2 input[type=text]:focus:not([readonly]) {
+    border: 0 0 0 1px;
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+}
+
+.active-purple-2 .fa {
+    color: #4dd0e1;
+}
+
+.mat-toolbar {
+    background-color: rgb(231, 36, 111);
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
