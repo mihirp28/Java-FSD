@@ -1,0 +1,127 @@
+<body>
+    
+
+  <nav [class.close]="flag" class="sidebar">
+      <header>
+          <div class="image-text">
+              <span class="image">
+                  <img src="../assets/KeepIcon.jpg" alt="">
+              </span>
+  
+              <div class="text logo-text">
+                  <span class="name">Keep Note</span>
+                  <!-- <span class="profession">Web developer</span> -->
+              </div>
+          </div>
+  
+          <i (click)="onClick()" class='bx bx-chevron-right toggle'></i>
+      </header>
+  
+      <div class="menu-bar">
+          <div class="menu">
+  
+              <li class="search-box">
+                  <i (click)="onClick()" class='bx bx-search icon'></i>
+                  <input type="text" placeholder="Search...">
+              </li>
+  
+              <ul class="menu-links">
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-bulb icon' ></i>
+                          <span class="text nav-text">Notes</span>
+                      </a>
+                  </li>
+  
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-bell icon' ></i>
+                          <span class="text nav-text">Reminders</span>
+                      </a>
+                  </li>
+  
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-pencil icon'></i>
+                          <span class="text nav-text">Edit Labels</span>
+                      </a>
+                  </li>
+  
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-archive icon' ></i>
+                          <span class="text nav-text">Archive</span>
+                      </a>
+                  </li>
+  
+                  <li class="nav-link">
+                      <a href="#">
+                          <i class='bx bx-trash icon' ></i>
+                          <span class="text nav-text">Trash</span>
+                      </a>
+                  </li>
+  
+              </ul>
+          </div>
+  
+          <div class="bottom-content">
+  
+            <li class="mode">
+                <div class="sun-moon">
+                    <i class='bx bx-moon icon moon'></i>
+                    <i class='bx bx-sun icon sun'></i>
+                </div>
+                <span class="mode-text text">Dark mode</span>
+  
+                <div (click)="OnSwitch()" class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </li>
+            
+        </div>
+    </div>
+  
+  </nav>
+  
+  <section class="home">
+    <div class="text">Keep Note</div>
+  
+  
+    
+  
+  
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+              <div class="input-field col s12">
+                <input #myTitle  id="tittle1"  placeholder="Enter Title" class="materialize-textarea" required>
+              </div>
+          </div>
+  
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea #myContent id="textarea1" placeholder="Enter your Notes" class="materialize-textarea" required></textarea>
+              <label for="textarea1"></label>
+            </div>
+            <button (click)="onNoteAdded({title:myTitle.value,content:myContent.value })" type="button" id="finalbtn">Submit</button>
+          </div>
+      </form>
+      </div>
+  
+  <div class="notes">
+      <lib-grid [width]="width" [column]="column" [gap]="gap">
+          
+          <lib-grid-item *ngFor="let note of notes"> 
+                  <h3 class="box">{{note.title}}</h3>
+                  <p class="box">{{note.content}}</p>
+            </lib-grid-item>
+      
+            
+      </lib-grid>
+      
+  </div>
+  
+      
+  </section>
+  
+  </body>

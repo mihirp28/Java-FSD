@@ -1,0 +1,10 @@
+.box{
+    background-color: #f1ca53;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: .7rem;
+  }
+  
+  .notes{
+    margin-left: 100px;
+  }
