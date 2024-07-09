@@ -1,0 +1,67 @@
+<div>
+    <h2>ViewTube live Stream Form</h2>
+    <br>
+    <form [formGroup] ="liveStreamForm" (ngSubmit) = "Submit()">
+        <label for="eventTitle">Event Title :</label>
+        <input id="eventTitle" type="text" formControlName ="eventTitle" >
+        <div *ngIf="eventTitle.invalid && (eventTitle.dirty || eventTitle.touched)" class="alert alert-danger">
+            <div *ngIf="eventTitle.errors?.['required']" >
+                Livestream Event Title is Mandatory
+            </div>
+            <div *ngIf="eventTitle.errors?.['maxlength']">
+                Livestream Event Title should less then 100 characters
+            </div>
+        </div>
+        
+        <label for="startdate">Event start date :</label>
+        <input id="startdate" type="date" formControlName="startdate" >
+        <div *ngIf="startdate.invalid && (startdate.dirty || startdate.touched)" class="alert alert-danger">
+            <div *ngIf="startdate.errors?.['required']" >
+                Event start date is Mandatory
+            </div>
+        </div>
+        <p *ngIf="startdate.errors?.['date'] && startdate.dirty" class="alert alert-danger">
+            Event start date time is greater than the current date time.
+        </p>
+
+        <label for="starttime">Event start time :</label>
+        <input id="starttime" type="time" formControlName="starttime">
+        <div *ngIf="starttime.invalid && (starttime.dirty || starttime.touched)" class="alert alert-danger">
+            <div *ngIf="starttime.errors?.['required']" >
+                Event start time is Mandatory
+            </div>
+        </div>
+
+
+        <label for="endDate">Event end date :</label>
+        <input id="endDate" type="date" formControlName="endDate">
+        <div *ngIf="endDate.invalid && (endDate.dirty || endDate.touched)" class="alert alert-danger">
+            <div *ngIf="endDate.errors?.['required']" >
+                Event end date is Mandatory
+            </div>
+        </div>
+
+        <label for="endtime">Event end time :</label>
+        <input id="endtime" type="time" formControlName="endtime">
+        <div *ngIf="endtime.invalid && (endtime.dirty || endtime.touched)" class="alert alert-danger">
+            <div *ngIf="endtime.errors?.['required']" >
+                Event end Time is Mandatory
+            </div>
+        </div>
+
+        <label for="details">Event details :</label>
+        <input id="details" type="textarea" formControlName="details">
+
+        <label for="guest">Guest List :</label>
+        <mat-chip-list id="guest" class="mat-chip-list-stacked" aria-label="Fish selection" class="list" >
+            <mat-chip class="list" color="accent" selected>Jr. NTR</mat-chip>
+            <mat-chip class="list" color="accent" selected >Prabhas</mat-chip>
+            <mat-chip class="list" color="accent" selected >Mahesh Babu</mat-chip>
+            <mat-chip class="list" color="accent" selected >Chiranjeevi</mat-chip> 
+            <mat-chip class="list" color="accent" selected >Pawan Kalyan</mat-chip>
+            <mat-chip class="list" color="accent" selected >Ram Charan</mat-chip>
+        </mat-chip-list>
+
+        <button type="submit" [disabled]="!liveStreamForm.valid">Start</button>
+    </form>
+</div>

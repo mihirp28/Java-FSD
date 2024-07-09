@@ -1,0 +1,246 @@
+<div id="form"> 
+  <h2 class="page-title">Video Upload Form</h2>
+  <form #registerForm="ngForm" id="data">
+    <div class="form-group">
+      <label for="url">Video url :</label>
+      <input type="url" class="form-control" [(ngModel)]="formData.url" name="url"  #url="ngModel" required />
+    </div>
+    <div *ngIf="url.invalid && (url.dirty || url.touched)" class="alert alert-danger">
+      Video url is Mandatory
+    </div>
+
+    <div class="form-group">
+      <label for="email">Video Title :</label>
+      <input type="text" class="form-control" [(ngModel)]="formData.title" name="title" #title="ngModel" required />
+    </div>
+    <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
+      Video Title is Mandatory
+    </div>
+
+    <div class="form-group">
+      <label for="description">video Description :</label>
+      <textarea class="form-control" [(ngModel)]="formData.description" name="description" #description="ngModel" style="width: 489px;"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Video Duration :</label>
+      <input type="time" class="form-control" [(ngModel)]="formData.duration" name="duration" #duration="ngModel" required />
+    </div>
+    <div *ngIf="duration.invalid && (duration.dirty || duration.touched)" class="alert alert-danger">
+      Video Duration is Mandatory
+    </div>
+
+    <div class="form-group">
+      <label for="email">Channel Title :</label>
+      <input type="text" class="form-control" [(ngModel)]="formData.channeltitle" name="channeltitle" #channeltitle="ngModel" required />
+    </div>
+    <div *ngIf="channeltitle.invalid && (channeltitle.dirty || channeltitle.touched)" class="alert alert-danger">
+      Channel Title is Mandatory
+    </div>
+
+    <h4 style="margin-top: 15px;">Audience Type :</h4>
+    <div style="margin-top: -8px;">
+      <mat-radio-button value="1" >Yes, it's made for Kids</mat-radio-button>
+      <mat-radio-button value="2" style="margin-top: 7px; display: block;">Not for kids</mat-radio-button>
+    </div>
+
+    <h4 style="margin-top: 21px;">Age Restriction :</h4>
+    <div style="margin-top: -10px;">
+      <mat-radio-button value="1">Yes, Restrict my videos to viewers over 18</mat-radio-button>
+      <mat-radio-button value="2" style="margin-top: 7px;">No, don't restrict my videos to viewers over 18</mat-radio-button>
+    </div>
+    
+    <div class="form-group" style="margin-top: 14px;">
+      <label for="date">Recording Date :</label>
+      <input type="date" class="form-control" [(ngModel)]="formData.date" name="date" #date="ngModel"/>
+    </div>
+
+    <p style="margin-top: 23px;">License Type :</p>
+    <mat-form-field style="margin-top: -10px;">
+      <mat-label>select</mat-label>
+      <mat-select disableRipple style="width: 200px;">
+        <mat-option value="1">None</mat-option>
+        <mat-option value="2">Standard Viewtube License</mat-option>
+        <mat-option value="3">Creative Common License</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p style="margin-top: 23px;">Distribution :</p>
+    <mat-form-field style="margin-top: -10px;">
+      <mat-label>select</mat-label>
+      <mat-select disableRipple style="width: 200px;">
+        <mat-option value="1">Everywhere</mat-option>
+        <mat-option value="2">Make this video available only on monetized platforms</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p style="margin-top: 23px;">Video Category  :</p>
+    <mat-form-field style="margin-top: -10px;">
+      <mat-label>select</mat-label>
+      <mat-select disableRipple style="width: 200px;">
+        <mat-option value="1">Film & Animation</mat-option>
+        <mat-option value="2">Autos & Vehicles</mat-option>
+        <mat-option value="3">Music</mat-option>
+        <mat-option value="4">Pets & Animals</mat-option>
+        <mat-option value="5">Sports</mat-option>
+        <mat-option value="6">Travel & Events</mat-option>
+        <mat-option value="7">Gaming</mat-option>
+        <mat-option value="8">People & Blogs</mat-option>
+        <mat-option value="9">Comedy</mat-option>
+        <mat-option value="10">Entertainment</mat-option>
+        <mat-option value="11">News & Politics</mat-option>
+        <mat-option value="12">Howto & Style</mat-option>
+        <mat-option value="13">Education</mat-option>
+        <mat-option value="14">Science & Technology</mat-option>
+        <mat-option value="15">Nonprofits & Activism</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <p style="margin-top: 23px;">Visibility :</p>
+    <mat-form-field >
+      <mat-label >select</mat-label>
+      <mat-select disableRipple style="width: 200px;" style="margin-top: -10px;" required>
+        <mat-option value="1" >Private</mat-option>
+        <mat-option value="2">Public</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div>
+      <button type="submit" class="btn btn-warning" [disabled] = "!registerForm.form.valid" (click)="upload()" style="margin-top: 10px;">Upload</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="form"> 
+    <h2 class="page-title">Video Upload Form</h2>
+    <form #registerForm="ngForm" id="data">
+      <div class="form-group">
+        <label for="url">Video url :</label>
+        <input type="url" class="form-control" [(ngModel)]="formData.url" name="url"  #url="ngModel" required />
+      </div>
+      <div *ngIf="url.invalid && (url.dirty || url.touched)" class="alert alert-danger">
+        Video url is Mandatory
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Video Title :</label>
+        <input type="text" class="form-control" [(ngModel)]="formData.title" name="title" #title="ngModel" required />
+      </div>
+      <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
+        Video Title is Mandatory
+      </div>
+  
+      <div class="form-group">
+        <label for="description">video Description :</label>
+        <textarea class="form-control" [(ngModel)]="formData.description" name="description" #description="ngModel" style="width: 489px;"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="duration">Video Duration :</label>
+        <input type="time" class="form-control" [(ngModel)]="formData.duration" name="duration" #duration="ngModel" required />
+      </div>
+      <div *ngIf="duration.invalid && (duration.dirty || duration.touched)" class="alert alert-danger">
+        Video Duration is Mandatory
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Channel Title :</label>
+        <input type="text" class="form-control" [(ngModel)]="formData.channeltitle" name="channeltitle" #channeltitle="ngModel" required />
+      </div>
+      <div *ngIf="channeltitle.invalid && (channeltitle.dirty || channeltitle.touched)" class="alert alert-danger">
+        Channel Title is Mandatory
+      </div>
+  
+      <h4 style="margin-top: 15px;">Audience Type :</h4>
+      <div style="margin-top: -8px;">
+        <mat-radio-button value="1" >Yes, it's made for Kids</mat-radio-button>
+        <mat-radio-button value="2" style="margin-top: 7px; display: block;">Not for kids</mat-radio-button>
+      </div>
+  
+      <h4 style="margin-top: 21px;">Age Restriction :</h4>
+      <div style="margin-top: -10px;">
+        <mat-radio-button value="1">Yes, Restrict my videos to viewers over 18</mat-radio-button>
+        <mat-radio-button value="2" style="margin-top: 7px;">No, don't restrict my videos to viewers over 18</mat-radio-button>
+      </div>
+      
+      <div class="form-group" style="margin-top: 14px;">
+        <label for="date">Recording Date :</label>
+        <input type="date" class="form-control" [(ngModel)]="formData.date" name="date" #date="ngModel"/>
+      </div>
+  
+      <p style="margin-top: 23px;">License Type :</p>
+      <mat-form-field style="margin-top: -10px;">
+        <mat-label>select</mat-label>
+        <mat-select disableRipple style="width: 200px;">
+          <mat-option value="1">None</mat-option>
+          <mat-option value="2">Standard Viewtube License</mat-option>
+          <mat-option value="3">Creative Common License</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <p style="margin-top: 23px;">Distribution :</p>
+      <mat-form-field style="margin-top: -10px;">
+        <mat-label>select</mat-label>
+        <mat-select disableRipple style="width: 200px;">
+          <mat-option value="1">Everywhere</mat-option>
+          <mat-option value="2">Make this video available only on monetized platforms</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <p style="margin-top: 23px;">Video Category  :</p>
+      <mat-form-field style="margin-top: -10px;">
+        <mat-label>select</mat-label>
+        <mat-select disableRipple style="width: 200px;">
+          <mat-option value="1">Film & Animation</mat-option>
+          <mat-option value="2">Autos & Vehicles</mat-option>
+          <mat-option value="3">Music</mat-option>
+          <mat-option value="4">Pets & Animals</mat-option>
+          <mat-option value="5">Sports</mat-option>
+          <mat-option value="6">Travel & Events</mat-option>
+          <mat-option value="7">Gaming</mat-option>
+          <mat-option value="8">People & Blogs</mat-option>
+          <mat-option value="9">Comedy</mat-option>
+          <mat-option value="10">Entertainment</mat-option>
+          <mat-option value="11">News & Politics</mat-option>
+          <mat-option value="12">Howto & Style</mat-option>
+          <mat-option value="13">Education</mat-option>
+          <mat-option value="14">Science & Technology</mat-option>
+          <mat-option value="15">Nonprofits & Activism</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <p style="margin-top: 23px;">Visibility :</p>
+      <mat-form-field >
+        <mat-label >select</mat-label>
+        <mat-select disableRipple style="width: 200px;" style="margin-top: -10px;" required>
+          <mat-option value="1" >Private</mat-option>
+          <mat-option value="2">Public</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <div>
+        <button type="submit" class="btn btn-warning" [disabled] = "!registerForm.form.valid" (click)="upload()" style="margin-top: 10px;">Upload</button>
+      </div>
+    </form>
+  </div> -->
