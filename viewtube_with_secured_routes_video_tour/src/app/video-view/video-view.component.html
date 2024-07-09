@@ -1,0 +1,12 @@
+<div>
+    <h4 style="margin-top: 9px;">Selected Video :</h4>
+    <div id="video-view" *ngIf = "videoObservable | async; let video" >
+        <img [src]="video.snippet.thumbnails.high.url" alt="">
+        <h3 style="margin-top: 10px;">{{video.snippet.title}}</h3>
+        <h4>Channel Title : {{video.snippet.channelTitle}}</h4>
+        <h4>{{video.statistics.viewCount}}views.{{video.snippet.relativeTime}}</h4>
+        <h4>Duration : {{video.contentDetails.length}}</h4>
+    </div>
+</div>
+
+    

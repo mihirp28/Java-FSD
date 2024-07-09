@@ -1,0 +1,85 @@
+#chips
+{
+  width: 100%;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.301);
+  padding: 15px;
+}
+
+/* #cards img {
+    /* width: 248px;
+    width: 100%;
+    height: 200px;
+    border-radius:5px;
+} */
+
+#cards img {
+    width: 228px;
+    height: 140px;
+    border-radius:5px;
+}
+
+#cards
+{
+    width: 260px;
+    margin:15px;
+    float: left;
+    height:320px;
+    background-color: rgba(169, 169, 169, 0.151);
+    border-radius: 7px;
+}
+
+#cards>a>h4
+{
+    font-size: 15px;
+    text-align: left;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+#videos
+{
+    margin-top: 25px;
+    margin-left: 15px;
+    /* width: 100%;
+    margin-right: auto; */
+}
+
+#cards>a>h5
+{
+    font-size: 13px;
+    margin-left: 12px;
+    color: rgb(255, 255, 255);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+/* #time
+{
+    width: 20%;
+    text-align: center ;
+    border-radius: 4px;
+    color: rgb(17, 1, 1);
+  
+    margin-top: -21px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.822);
+    margin-left: 223px;
+} */
+
+#time
+{
+    width: 20%;
+    text-align: center ;
+    border-radius: 4px;
+    color: white;
+    margin-left: 182px;
+    margin-top: -21px;
+    position: relative;
+    background-color: black;
+}

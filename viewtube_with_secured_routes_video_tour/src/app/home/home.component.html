@@ -1,0 +1,42 @@
+<div id="chips">
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip color="primary" selected>All</mat-chip>
+      <mat-chip>Electronics</mat-chip>
+      <mat-chip>Computers</mat-chip>
+      <mat-chip> Mechanics</mat-chip>
+      <mat-chip>Aeronautics</mat-chip>
+      <mat-chip>Metallurgy</mat-chip>
+    </mat-chip-list>
+</div>
+
+<div style="display:flex">
+    <div [class.view-image-list]="viewOutlet.isActivated" s>
+        <div id="videos">
+            <mat-card id="cards"  *ngFor="let data of video$ |async">
+                <a routerLink="video-view/{{data.id}}">
+                    <img [src] ="data.snippet.thumbnails.medium.url">
+                    <mat-card-content>
+                        <mat-card-subtitle id="time"> 
+                            {{data.contentDetails.length}}
+                        </mat-card-subtitle>
+                        <mat-card-subtitle>
+                            {{ data.snippet.title}}
+                        </mat-card-subtitle>
+                        <mat-card-subtitle>
+                            {{data.snippet.channelTitle}}
+                        </mat-card-subtitle>
+                        <mat-card-subtitle>
+                            {{data.statistics.viewCount}}views.{{data.snippet.relativeTime}} 
+                        </mat-card-subtitle>
+                    </mat-card-content>
+                </a>
+            </mat-card>
+        </div>
+    </div>
+    <div [class.view-large-image]="viewOutlet.isActivated" >
+        <router-outlet #viewOutlet="outlet" >
+            
+            
+        </router-outlet>
+    </div>
+</div>

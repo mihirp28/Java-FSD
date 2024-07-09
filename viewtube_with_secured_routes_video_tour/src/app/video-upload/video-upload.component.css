@@ -1,0 +1,16 @@
+#form
+{
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.712);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#data>div>label
+{
+    margin-top: 13px;
+}
+
