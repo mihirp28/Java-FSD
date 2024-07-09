@@ -1,0 +1,21 @@
+
+{
+  "name": "jason.json",
+  "version": "1.0.0",
+  "description": "The team of Kriya App have developed a Task Board Render, which can display the data in the desired format using JavaScript. Organization has planned to extend the functionality of Kriya App by adding new features. This requires more developers to be added to the team to scale the project. ​",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab-wipro.stackroute.in/bodasingibhanuprasad/kriya-powered-by-typescript-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.27",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.3"
+  }
+}
