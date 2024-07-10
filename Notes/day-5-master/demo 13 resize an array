@@ -1,0 +1,29 @@
+
+public class Day3Demos {
+
+
+	public static void main(String[] args) {
+
+			
+		int[] x= {5,6,8,7};
+		
+		for(int a:x)
+		{
+			System.out.println(a);
+		}
+		//arg 1 var same type of array
+		// 2nd array
+		
+		
+	}
+}
+
+// if a user tries to access a null memory u get null pointer 
+
+// premitive -> def values based on type
+// class type -> all class types are by def null
+
+//all class types are Objects
+
+
+

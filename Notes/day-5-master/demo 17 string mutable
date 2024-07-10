@@ -1,0 +1,33 @@
+
+
+
+// everything in java is Object except the 8 premitive 
+
+// those 8 premitives can be treated as Objects using wrapper class
+
+// string is immutable Object
+
+
+//StringBuffer 
+//StringBuilder -> 1.5
+public class Day3Demos {
+
+	public static void main(String[] args) {
+
+		Day3Demos d=new Day3Demos();
+
+		String x="hello strings"; // hello strings
+		 x.toUpperCase(); // HELLO STRINGS
+		 x.concat("world"); //hello strings world
+		 System.out.println(x);
+
+		 StringBuilder sb=new StringBuilder("Hello");
+		 sb.append(" world");
+		 
+		 System.out.println(sb);
+		 
+		 
+	}
+}
+
+

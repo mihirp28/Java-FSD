@@ -1,0 +1,39 @@
+
+public class Day3Demos {
+
+	
+	public static void main(String[] args) {
+	
+		int[] marks=new int[50];
+		
+		int mark[]=new int[50];
+		
+		int[] x= {9,15,4,6,9};
+		
+		
+		int[] a,b[];
+		
+		//int a[];
+		//int b[][];
+		
+		a=new int[5];
+		
+		//b=new int[10];
+		
+		
+		
+		
+	}
+}
+
+//marks[0]
+//marks[1]
+
+// 0,1,2,3,4,5...49
+
+
+
+
+
+
+

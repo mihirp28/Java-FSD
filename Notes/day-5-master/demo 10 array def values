@@ -1,0 +1,37 @@
+
+public class Day3Demos {
+
+	
+	public static void main(String[] args) {
+			
+		boolean[] x=new boolean[5];
+		// local var : dont have def values
+		
+		
+		//int test[];
+		//int y;
+		
+		//System.out.println(x[6]);
+		//ArrayIndexOutOfBounds
+		
+		//System.out.println(y);
+
+		System.out.println(x[0]);
+		
+		//System.out.println(test[0]);
+		//error local var might not have been initilized
+		
+	}
+}
+
+//marks[0]
+//marks[1]
+
+// 0,1,2,3,4,5...49
+
+
+
+
+
+
+

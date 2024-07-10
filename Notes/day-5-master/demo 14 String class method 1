@@ -1,0 +1,29 @@
+
+
+
+// everything in java is Object except the 8 premitive 
+
+// those 8 premitives can be treated as Objects using wrapper class
+
+
+public class Day3Demos {
+
+
+	String disp()
+	{
+		System.out.println("hello world");
+		return "test";
+	}
+	public static void main(String[] args) {
+
+
+		String x="hello";
+		
+		System.out.println(x.toUpperCase());
+		
+		Day3Demos d=new Day3Demos();
+		System.out.println(d.disp());
+		
+	}
+}
+

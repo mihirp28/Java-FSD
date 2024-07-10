@@ -1,0 +1,25 @@
+
+
+
+// everything in java is Object except the 8 premitive 
+
+// those 8 premitives can be treated as Objects using wrapper class
+
+// string is immutable Object
+
+public class Day3Demos {
+
+	public static void main(String[] args) {
+
+
+		String x="hello strings";
+		 x.toUpperCase();
+		
+		System.out.println(x);
+		
+		x=x.toUpperCase();
+		System.out.println(x);
+		
+	}
+}
+

@@ -1,0 +1,35 @@
+-> write a java code to count the num of odd and even numbers in an int array
+
+String countOddEven(int[] arr)
+{
+    //write ur code here
+
+}
+
+//sample array : 1 2 4 5 
+
+//sample output - > Number of Odd element are 2 and number of even are 2
+
+
+
+
+
+
+-> write a java code to count the num of cap and small case letters in a char array array
+
+String countOddEven(char[] arr)
+{
+    //write ur code here
+
+}
+
+
+
+//sample array : A a D F b 
+
+//sample output - > Number of cap element are 3 and number of small are 2
+
+
+
+
+

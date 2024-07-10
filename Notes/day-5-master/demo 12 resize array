@@ -1,0 +1,33 @@
+
+public class Day3Demos {
+
+
+	public static void main(String[] args) {
+
+			
+		int[] x= {5,6,8,7};
+		
+		System.out.println(x[2]);
+		
+		System.out.println("old len "+x.length);
+		
+		x=new int[6];
+		//we cannot resize an array
+		//but same ref var cab be used to ref to an entirely new array
+	//in which case all the previous values wil be lost
+		System.out.println("new len "+x.length);
+		
+		System.out.println(x[2]);
+		
+	}
+}
+
+// if a user tries to access a null memory u get null pointer 
+
+// premitive -> def values based on type
+// class type -> all class types are by def null
+
+//all class types are Objects
+
+
+

@@ -1,0 +1,23 @@
+
+public class Day3Demos {
+
+	static int[] x;
+	static String y;
+	public static void main(String[] args) {
+		
+		
+		System.out.println("y is "+y);
+		
+		System.out.println(x[6]);
+	}
+}
+
+// if a user tries to access a null memory u get null pointer 
+
+// premitive -> def values based on type
+// class type -> all class types are by def null
+
+
+
+
+
