@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+//array of array
+
+public class SciCalcService {
+
+	public static void main(String[] args) {
+
+		String[] types= {"fruits","cars","languages"};
+		String[][] data={ {"apple","mango","banana","kiwi"}, {"audi","bmw","maruti"},{"english","hindi","java","kannada"} };
+
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("select any type from the given list 1, 2 or 3");
+		System.out.println("1.fruits");
+		System.out.println("2.cars");
+		System.out.println("3.languages");
+		
+		int choice=sc.nextInt();
+		
+		System.out.println(choice);
+		choice=choice-1;
+		
+		for(int i=0;i<data[choice].length;i++)
+		{
+			System.out.println(data[choice][i]);
+		}
+		
+		
+	
+
+		}
+
+}
+// sslc
+// a -> 50
+// b  ->40
+// c ->30
