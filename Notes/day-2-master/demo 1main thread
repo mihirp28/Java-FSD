@@ -1,0 +1,20 @@
+
+
+//why main gets executed first ? 
+// coz main is the primary thread 
+//execution path of a program
+
+public class MyFirstJavaCode {
+
+	public static void Main(String[] args) {	
+		System.out.println("MY MAIN METHOD");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("My main method");
+		String name= Thread.currentThread().getName();	
+	System.out.println("name of current thread is "+name);
+	
+	}
+
+}
