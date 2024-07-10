@@ -1,0 +1,18 @@
+--> write a java program divide 2 number 
+function should be able to divide the numbers and return decimal result 
+
+
+return "result "+result
+
+--> test
+
+
+the returned result is correct  
+
+-> check if any of the given arg is negative
+// --> return negavtive numbers not allowed 
+
+-> check is second is 0 
+//return cannot divide a number by zero
+
+

@@ -1,0 +1,48 @@
+
+-> right click on the project
+-> properties
+->java build path (in left panel)
+->right panel select libraries tab
+->click classpath
+-> add library 
+-> select junit
+->next ->finish
+
+----write java code , test cases and run as junit
+
+--------java 
+
+
+public class MyCalcDemo {
+
+	public int addNumbers(int a,int b)
+	{
+		return a-b;
+	}
+	
+	
+}
+
+
+------------------
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class MyCalcDemoTest {
+
+	@Test
+	void sumUpTwoNumbersWhenGivenPositeIntegers()
+	{
+		MyCalcDemo demo=new MyCalcDemo();		
+		assertEquals(4, demo.addNumbers(2, 2), "check the logic of your code");
+	}
+	
+}
+
+
+
+
+
+ 

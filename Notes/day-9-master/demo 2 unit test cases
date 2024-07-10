@@ -1,0 +1,96 @@
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+public class MyCalcDemoTest {
+
+	@Test
+	void sumUpTwoNumbersWhenGivenPositeIntegers()
+	{
+		MyCalcDemo demo=new MyCalcDemo();		
+		//assertEquals(4, demo.addNumbers(2, 2), "check the logic of your code");
+		//assertFalse("check the logic",demo.addNumbers(4, 4)==8);
+		assertTrue("check the logic",demo.addNumbers(4, 4)==8);
+	
+	}
+	
+	
+	@Test
+	void shouldNotReturnNullWhenGivenName()
+	{
+	
+		MyCalcDemo demo=new MyCalcDemo();			
+		assertNotNull("Student Object is null",demo.getStud("raj"));
+	}
+
+
+	@Test
+	void shouldNotReturnNullNameWhenGivenName()
+	{
+		MyCalcDemo demo=new MyCalcDemo();			
+		assertNotNull("name is returned as null",demo.getStud("raj").getName());
+	}
+
+	@Test
+	void shouldCheckGivenNameIsName()
+	{
+		MyCalcDemo demo=new MyCalcDemo();			
+		assertEquals("raj",demo.getStud("raj").getName(),"when raj is passed raj is not returend");
+	}
+	
+	
+}
+
+
+
+-------------------Student
+
+
+public class Student {
+
+	
+	String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+}
+
+
+----------------------------MyCalcDemo
+
+public class MyCalcDemo {
+
+	
+	public int addNumbers(int a,int b)
+	{
+		return a+b;
+	}
+	
+	
+	
+	public Student getStud(String name)
+	{
+		Student student=new Student();
+		
+		student.setName(name);
+		//student.setName("Mr "+name);
+		
+		return student;
+	}
+	
+	
+}
+
+

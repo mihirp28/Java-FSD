@@ -1,0 +1,38 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class AssignmentDiv {
+
+	
+	
+	public static void main(String[] args) throws ParseException {
+		
+//31-01-1990
+		
+		Date d=new Date();
+		System.out.println(d);
+		
+		Date d1=new Date("02/03/1990");
+		System.out.println(d1);
+		
+		Scanner sc=new Scanner(System.in);
+		String dob=sc.next();
+		//Date d2=new Date(dob);
+		
+		SimpleDateFormat sd=new SimpleDateFormat("dd-MM-yyyy");
+		//take date and return String 
+		//or take string and return date
+		
+		Date d2= sd.parse(dob);
+		
+		System.out.println(d2);
+	
+		System.out.println(sd.format(d2));
+	
+	
+	}
+}

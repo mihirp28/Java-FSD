@@ -1,0 +1,88 @@
+
+
+public class MyCalcDemo {
+
+	int x=0;
+	
+	public int addNumbers(int a)
+	{
+		x=a+x;
+		return x;
+	}
+
+		
+}
+
+
+---------------
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+
+public class MyCalcDemoTest {
+	
+	
+	static MyCalcDemo demo;
+	
+	@Test
+	void sumUpTwoNumbersWhenGivenPositeIntegers(){
+		//MyCalcDemo demo=new MyCalcDemo();		
+		int res=demo.addNumbers(10);
+		assertEquals(10, res,"check logic");
+	System.out.println("test1");
+	}
+	
+
+	@Test
+	void sumUpTwoWithNegativeValues(){
+		//MyCalcDemo demo=new MyCalcDemo();		
+		int res=demo.addNumbers(50);
+		assertEquals(50, res,"check logic");
+		System.out.println("test3");
+	}
+
+	
+	@Test
+	void sumUp(){
+		//MyCalcDemo demo=new MyCalcDemo();		
+		int res=demo.addNumbers(-10);
+		assertEquals(-10, res,"check logic");
+	
+		System.out.println("test2");}
+	
+	
+	
+	@AfterAll
+	static void afterAlltest()
+	{
+		System.out.println("after all test cases");
+		demo=null;
+	}
+	
+
+	@BeforeAll
+	static void beforeAlltest()
+	{
+		demo=new MyCalcDemo();
+		
+		System.out.println("before all test cases");
+	}
+	
+	
+	
+	  @BeforeEach void beforeEackTest() { 
+		
+		  demo.x=0;
+	  }
+	 	
+	
+}
