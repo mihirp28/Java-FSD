@@ -1,0 +1,29 @@
+-> create a java program to acccept two chars as args for a method and check the are equal or not
+
+-> create a java program to acccept two chars as args for a method and check the are equal or not irespoective of the case
+
+
+String compareChars(char a,char b)
+{
+
+}
+
+
+// a ,  b - not equal
+// a ,  A - not equal
+// a ,  a -  equal
+
+
+
+
+
+String compareCharsIgnoreCase(char a,char b)
+{
+    
+}
+
+// a ,  b - not equal
+// a ,  A -  equal
+// a ,  a -  equal
+//A ,A -- equal
+// A , a -- equal 

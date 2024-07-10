@@ -1,0 +1,48 @@
+
+
+
+
+// everything in java is Object except the 8 premitive 
+
+// those 8 premitives can be treated as Objects using wrapper class
+
+// string is immutable Object
+
+
+//StringBuffer  --> safe (Thread safe) locked -synchronized
+
+//StringBuilder -> 1.5 fast (Thread unsafe) -unsynchronized
+
+
+
+public class Day3Demos {
+
+	public static void main(String[] args) {
+
+
+		String x= "hello";
+		x=x.replace('h', 'e');
+		System.out.println(x);
+		//eello
+		char a= x.charAt(4);
+		
+		System.out.println(a);
+		
+		
+		String a1="hello";
+		String a2="hello";
+		
+		if(a1==a2)
+		{
+			System.out.println("equal");
+		}
+		else
+		{
+			System.out.println("Not equal");
+		}
+		
+		
+	}
+}
+
+

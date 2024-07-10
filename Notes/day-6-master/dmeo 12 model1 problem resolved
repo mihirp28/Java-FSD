@@ -1,0 +1,81 @@
+import java.util.Date;
+
+public class Employee {
+
+	private String empName;
+	private int empId;
+	private Date dob;
+
+	void display()
+	{
+		System.out.println("Name  "+empName + "\nId "+empId + " \nDOB "+dob);
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+// right click - source - generate getters and setters
+	
+	public void setEmpName(String empName) {
+		
+		this.empName = empName;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		if(empId < 0)
+		{
+		
+		}
+		else {
+		this.empId = empId;
+			}
+		}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+	
+	
+	
+}
+
+// public -- everyone
+// private -- no one - only within the class
+// protected : child and package members
+// default : all package members 
+
+
+
+
+
+---------------------service
+
+
+
+
+import java.util.Date;
+
+public class EmployeeService {
+
+	public static void main(String[] args) {
+		
+		Employee employee=new Employee();
+		employee.setEmpName("Rohit");
+		employee.setEmpId(100);
+							// MM/dd/yyyy
+		employee.setDob(new Date("01/11/1998"));
+		
+		employee.display();
+
+	}
+
+}
+

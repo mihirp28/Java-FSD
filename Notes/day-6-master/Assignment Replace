@@ -1,0 +1,32 @@
+
+
+public class Day3Demos {
+	
+		static String myReplace(String data, char find , char replace)
+		{
+			char[] arr =  data.toCharArray();
+			
+			//write your code here
+						
+			String res=new String(arr);
+			return res;
+		}
+				
+	public static void main(String[] args) {
+
+		String x="Hello";
+		
+		myReplace(x, 'H', 'e');
+		//eello
+
+		//myReplace(x, 'k', 'e');
+		// given char not found 
+		
+		
+	}
+}
+
+
+
+
+

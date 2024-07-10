@@ -1,0 +1,69 @@
+
+
+
+// everything in java is Object except the 8 premitive 
+
+// those 8 premitives can be treated as Objects using wrapper class
+
+// string is immutable Object
+
+
+//StringBuffer  --> safe (Thread safe) locked -synchronized
+
+//StringBuilder -> 1.5 fast (Thread unsafe) -unsynchronized
+
+
+
+// everything is java is a Object
+// Object is a parent (root)class for all the classes in java
+
+
+// parrot is a bird ??
+// tiger is a animal ?? 
+
+// library has a book ?
+// employee has a address ?
+
+
+// is a (inheritance)  --- has a
+
+
+
+
+
+public class Day3Demos {
+
+	public static void main(String[] args) {
+
+		
+		
+				
+	String a3="Hello";
+	String a4="hello";
+		
+		
+		if(a3.equals(a4))
+		{
+			System.out.println("new  equal with equals method");
+		}
+		else
+		{
+			System.out.println("new Not equal with equals method");
+		}
+		
+		if(a3.equalsIgnoreCase(a4))
+		{
+			System.out.println("new  equal with equalsIgnoreCase method");
+		}
+		else
+		{
+			System.out.println("new Not equal with  equalsIgnoreCase method");
+		}
+		
+		
+		
+		
+	}
+}
+
+

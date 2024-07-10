@@ -1,0 +1,88 @@
+
+NOTE : ref the digram of the below code in telegram group
+--------
+package pack1;
+
+public class C1 {
+
+	public String pubVar;
+	private String privVar;
+	 String defVar;
+	protected String protVar;
+		
+}
+
+
+------------------------------
+
+package pack1;
+
+public class C2 {
+
+	void abc()
+	{
+		C1 c=new C1();
+		System.out.println(c.pubVar);
+		System.out.println(c.privVar);
+		System.out.println(c.defVar);
+		System.out.println(c.protVar);
+	}
+}
+
+
+
+-------------------
+
+package pack1;
+
+public class C3 extends C1{
+
+	void abc()
+	{
+		C1 c=new C1();
+		System.out.println(c.pubVar);
+		System.out.println(c.privVar);
+		System.out.println(c.defVar);
+		System.out.println(c.protVar);
+	}
+}
+
+----------------------------
+
+package pack2;
+
+import pack1.C1;
+
+public class C4 {
+
+	void abc()
+	{
+		C1 c=new C1();
+		System.out.println(c.pubVar);
+		System.out.println(c.privVar);
+		System.out.println(c.defVar);
+		System.out.println(c.protVar);
+	}
+}
+
+
+---------------
+
+package pack2;
+import pack1.C1;
+
+//public class C5 extends pack1.C1{
+
+public class C5 extends C1{
+	
+	void abc()
+	{
+		C1 c=new C1();
+		System.out.println(pubVar);
+		System.out.println(privVar);
+		System.out.println(defVar);
+		System.out.println(protVar);
+	}
+}
+
+

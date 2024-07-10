@@ -1,0 +1,40 @@
+import java.util.Date;
+
+public class Employee {
+
+	String empName;
+	int empId;
+	Date dob;
+
+	void display()
+	{
+		System.out.println("Name  "+empName + "\nId "+empId + " \nDOB "+dob);
+	}
+	
+}
+
+
+--------------------------------------------
+IMPORTANT NOTE: Write EMployee service lass in a seprate file
+-------------------------------------------
+
+
+import java.util.Date;
+
+public class EmployeeService {
+
+	public static void main(String[] args) {
+		
+		Employee employee=new Employee();
+		employee.empName="Rohit";
+		employee.empId=18;
+							// MM/dd/yyyy
+		employee.dob=new Date("01/11/1998");
+		
+		employee.display();
+
+	}
+
+}
+
+
