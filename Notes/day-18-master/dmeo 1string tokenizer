@@ -1,0 +1,19 @@
+
+class StrTokenDemo
+{
+
+	public static void main(String[] args) {
+	
+		String abc="hello,world,welcome,to,java,world";
+		
+		StringTokenizer str=new StringTokenizer(abc,",");
+		
+		while(str.hasMoreTokens())
+		{
+			System.out.println(str.nextToken());
+		}
+		
+	}
+
+
+}

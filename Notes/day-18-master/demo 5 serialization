@@ -1,0 +1,146 @@
+package pack2;
+
+import java.io.Serializable;
+
+public class Student implements Serializable{
+
+private	int rollNo;
+private	 transient String  name;
+private	int age;
+
+static int abc;
+int xyz;
+
+public Student() {
+	// TODO Auto-generated constructor stub
+}
+
+public Student(int rollNo, String name, int age) {
+	super();
+	this.rollNo = rollNo;
+	this.name = name;
+	this.age = age;
+}
+
+public int getRollNo() {
+	return rollNo;
+}
+
+public void setRollNo(int rollNo) {
+	this.rollNo = rollNo;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public int getAge() {
+	return age;
+}
+
+public void setAge(int age) {
+	this.age = age;
+}
+
+@Override
+public String toString() {
+	return "Student [rollNo=" + rollNo + ", name=" + name + ", age=" + age + "]";
+}
+
+
+	
+}
+
+------------------------------------
+
+
+package pack2;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+//serialization : is process of storing the state of object
+
+//static variable don't pass serialization
+
+// transient variable don't pass serialization
+public class SerlzDemo {
+
+	public static void main(String[] args) {
+
+		Student student=new Student(55, "JOHN CENA", 40);
+		
+		student.abc=500;
+		student.xyz=600;
+		try {
+			
+			FileOutputStream fout=new FileOutputStream("stud.ser");
+			ObjectOutputStream oout=new ObjectOutputStream(fout);
+			oout.writeObject(student);
+			System.out.println("objected stored");
+		
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+------------------------------------
+
+package pack2;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Desrlzd {
+
+	public static void main(String[] args) {
+try {
+			
+			FileInputStream fin=new FileInputStream("stud.ser");
+			ObjectInputStream oin=new ObjectInputStream(fin);
+			
+		Student student=(Student)oin.readObject();
+			
+			System.out.println(student);
+			System.out.println(student.abc);
+			System.out.println(student.xyz);
+		
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

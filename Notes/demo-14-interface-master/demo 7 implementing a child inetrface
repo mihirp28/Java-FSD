@@ -1,0 +1,33 @@
+
+public interface Storable {
+}
+
+interface think {	
+	void abc();
+}
+
+interface test extends  think{	
+	void xyz();
+}
+
+class a implements test
+{
+
+	@Override
+	public void abc() {
+	}
+
+	@Override
+	public void xyz() {		
+	}
+	
+}
+
+
+
+
+// java supports multiple inheritance ??YES AND NO
+
+//class extends class
+//class implements interface 
+//interface extends interface

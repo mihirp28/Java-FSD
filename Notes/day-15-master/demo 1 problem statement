@@ -1,0 +1,15 @@
+
+
+// try , catch ,finally ,throw , throws
+
+public class ExceptionsDemo {
+
+	public static void main(String[] args) {
+
+		System.out.println("line 3 "+(10/0)); // 
+		System.out.println("line 1");
+		System.out.println("line 2");
+	
+	}
+
+}

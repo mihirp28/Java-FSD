@@ -1,0 +1,33 @@
+//one memory is created 
+class Parent {
+
+	
+	Parent()
+	{
+		System.out.println("parent const");
+	}
+	
+}
+public class Child extends Parent {
+
+	
+	Child(){
+	//super()
+		System.out.println("child const");
+	}
+	
+	
+	Child(int x)
+	{
+		//super();
+		this();
+		System.out.println("const with args");
+	}
+	
+
+	public static void main(String[] args)
+	{
+		
+		Child c=new Child(10);
+	}
+}

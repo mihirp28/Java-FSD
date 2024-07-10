@@ -1,0 +1,44 @@
+package pack1;
+
+//abstract method is one without a body
+// abstract method can only be written in abstarct class
+//child class must override abstract methods of parent
+
+//abstract methods cannot be
+//private abstract
+//final abstract
+//static abstract->u cannot override a static method
+
+
+abstract class Animal
+{
+	 public static void abc() {}
+}
+
+class Tiger extends Animal
+{
+	//method is valid but u cannot call it overriding
+	//@Override 
+	public static void abc()
+	{
+		
+	}
+}
+
+
+public class InhrtncDemo {
+	
+	public static void main(String[] args) {
+	}
+
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class ReadAndWrite {
+
+	void writeData()
+	{
+		
+		FileWriter  out=null;
+		
+		try {
+			out=new FileWriter("test.txt",true);
+			out.write("new write method data \n");
+		//out.append("test data \n");
+			System.out.println("done");
+		} catch (IOException e) {
+					e.printStackTrace();
+		}
+		finally {
+			try {
+			out.flush();
+			out.close();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		
+		
+	}
+	
+	
+	void dataRead()
+	{
+		
+		try {
+			FileReader fileReader=new FileReader("test.txt");
+			BufferedReader rd=new BufferedReader(fileReader);
+			
+			String data="";
+			while( (data=rd.readLine())!=null)
+			{
+				System.out.println(data);
+			}
+			
+		
+		} catch (FileNotFoundException e) {
+		
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+
+		
+	//	new ReadAndWrite().writeData();
+	
+	new ReadAndWrite().dataRead();
+	}
+
+}

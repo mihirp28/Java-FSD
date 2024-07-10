@@ -1,0 +1,23 @@
+
+public class ExceptionsDemo {
+
+	public static void main(String[] args) {
+
+		try
+		{
+			String x=null;
+			//int [] x= {2,5};
+			
+			x.toUpperCase();
+			//System.out.println(10/x[3]);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+	
+		}
+
+		System.out.println("test line");
+		
+	}
+
+}

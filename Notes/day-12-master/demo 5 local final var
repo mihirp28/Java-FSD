@@ -1,0 +1,45 @@
+package pack1;
+
+//parent comes b4 child ??
+//child inherits everything frm parent except private and constructor
+
+// inherit
+//invoking
+
+//super() must be the frst statemt in child const
+
+//final methods cannot be overridden
+
+class parent{
+
+	
+}
+
+class child extends parent{
+	
+}
+
+
+public class InhrtncDemo {
+
+	public static void main(String[] args) {
+		
+		final int AGE;
+		
+		AGE=50;
+		System.out.println(AGE);
+		//The final  variable AGE may already have been assigned
+		//cannot reassign the value to final var
+		//AGE=60;
+	}
+
+}
+
+
+
+
+
+
+
+
+

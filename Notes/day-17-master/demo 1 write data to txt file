@@ -1,0 +1,40 @@
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class ReadAndWrite {
+
+	void writeData()
+	{
+		
+		FileWriter  out=null;
+		
+		try {
+			out=new FileWriter("test.txt",true);
+			out.write("new write method data \n");
+		//out.append("test data \n");
+			System.out.println("done");
+		} catch (IOException e) {
+					e.printStackTrace();
+		}
+		finally {
+			try {
+			out.flush();
+			out.close();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) {
+
+		
+		new ReadAndWrite().writeData();
+	}
+
+}

@@ -1,0 +1,25 @@
+
+public interface Storable {
+}
+
+interface think {	
+}
+
+interface test extends Storable ,think{	
+}
+
+//------------------------
+class a{
+}
+class b{
+}
+
+class c extends b,a{
+	
+}
+
+// java supports multiple inheritance ??YES AND NO
+
+//class extends class
+//class implements interface 
+//interface extends interface

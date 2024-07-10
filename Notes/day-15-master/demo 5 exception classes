@@ -1,0 +1,38 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+// try , catch ,finally ,throw , throws
+
+// try should be imedtly flowd by catch or finally
+
+
+// all child classes of exception class are checked exception except runtime exception and its child
+//compile forces the programmer to handle checked exception
+
+public class ExceptionsDemo {
+
+	public static void main(String[] args) {
+
+		
+//		throw new ArithmeticException();
+
+
+		//throw new ArrayIndexOutOfBoundsException();
+		
+		
+		//throw new NumberFormatException();
+		
+		//throw new StringIndexOutOfBoundsException();
+		
+		//throw new NullPointerException();
+		
+		
+		//throw new ClassNotFoundException();
+		
+		//throw new FileNotFoundException();
+	
+	throw new IOException();
+	
+	}
+
+}

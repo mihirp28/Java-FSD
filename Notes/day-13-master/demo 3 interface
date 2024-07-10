@@ -1,0 +1,29 @@
+// interface methods are abstract by def
+
+
+interface Flyer
+{
+	 void fly();
+}
+
+class Bird{
+}
+
+class Parrot extends Bird implements Flyer{
+
+	@Override
+	public void fly() {
+		
+	}
+
+	
+}
+
+
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+
+	}
+
+}

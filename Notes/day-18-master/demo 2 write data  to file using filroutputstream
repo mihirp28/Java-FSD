@@ -1,0 +1,38 @@
+package pack2;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
+
+
+public class StudentServiceImpl {
+
+		
+	
+	public static void main(String[] args) {
+	
+		
+		try {
+			FileOutputStream fout=new FileOutputStream("myfile.txt");
+			
+			PrintWriter out=new PrintWriter(fout);
+			out.println(10);
+			out.println("Hello world");
+			out.println(10.5f);
+			
+			
+			out.flush();
+			out.close();
+			System.out.println("data written");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+
+
+}

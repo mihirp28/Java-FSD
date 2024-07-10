@@ -1,0 +1,35 @@
+
+
+
+ class InnerClassDemo {
+
+	 int x=10;
+
+	 class inner{
+		 int y=50;
+		 void abc()
+		 {
+			 System.out.println("abc method "+x);
+		 }
+		 
+	 } 
+	
+	 void disp()
+	 {
+//		 System.out.println(y);
+	 }
+	 
+	public static void main(String[] args) {
+
+		
+		InnerClassDemo i=new InnerClassDemo();
+		InnerClassDemo.inner in=i.new inner();
+		in.abc();
+		System.out.println(in.y);
+		
+		//System.out.println(i.y);
+	 	 	
+		
+	}
+
+}

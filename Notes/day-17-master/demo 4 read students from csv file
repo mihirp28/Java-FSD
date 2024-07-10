@@ -1,0 +1,165 @@
+
+---------------------------dao
+package pack2;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class StudentDao {
+
+	public void saveStudents(Student[] students)
+	{
+		FileWriter out=null;
+		try {
+			
+			 out=new FileWriter("student.csv");
+			out.append("NAME,");
+			out.append("AGE,");
+			out.append("ROLL NO \n");
+			
+			for(Student stud:students)
+			{
+				out.append(stud.getName()+",");
+				out.append(stud.getAge()+",");
+				out.append(stud.getRollNo()+",");
+				out.append("\n");
+			}
+			
+			
+
+		}
+		catch (Exception e) {
+		e.printStackTrace();
+		}
+finally {
+	try {
+		out.flush();
+		out.close();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
+		
+	}
+	
+	
+	
+	
+	public Student[] getStudents()
+	{
+		
+		Student[] students=new Student[4];
+		
+		try
+		{
+			
+			FileReader rd=new FileReader("student.csv");
+			BufferedReader brd=new BufferedReader(rd);
+			
+			brd.readLine();
+			String data="";
+			int i=0;
+			while((data=brd.readLine()) !=null )
+			{
+				String[] arr=data.split(",");
+				//name , age , rollno
+				
+				String name= arr[0];
+				int age=Integer.parseInt(arr[1]);
+				int rollNo=Integer.parseInt(arr[2]);
+			
+			Student student=new Student(rollNo, name, age);	
+				
+			students[i]=student;
+			i++;
+			
+			}
+				
+		}
+		catch (Exception e) {
+	
+			e.printStackTrace();
+		}
+		
+		return students;
+	}
+	
+	
+	}
+
+
+    ---------------------------------service
+
+    package pack2;
+
+public interface StudentService {
+
+	void saveStudents(Student[] students);
+	
+	Student[] getStudents();
+	
+	
+}
+
+
+---------------impl 
+
+
+package pack2;
+
+public class StudentServiceImpl implements StudentService{
+
+	StudentDao dao;
+
+
+	@Override
+	public void saveStudents(Student[] students) {
+		dao=new StudentDao();
+		dao.saveStudents(students);
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		Student student1=new Student(1, "Raj", 15);
+		Student student2=new Student(2, "Raju", 15);
+		Student student3=new Student(3, "Raja", 15);
+		Student student4=new Student(4, "Rajesh", 15);
+	
+	Student[] students=new Student[4];
+	
+	students[0]=student1;
+	students[1]=student2;
+	students[2]=student3;
+	students[3]=student4;
+	
+	
+	StudentService service=new StudentServiceImpl();
+	//service.saveStudents(students);
+	
+	Student[] studentsData=service.getStudents();
+		
+		
+	for(Student student:studentsData)
+	{
+		System.out.println(student);
+		
+	}
+	
+	}
+
+
+	@Override
+	public Student[] getStudents() {
+		dao=new StudentDao(); 
+		
+		return dao.getStudents();
+	}
+}
+
+

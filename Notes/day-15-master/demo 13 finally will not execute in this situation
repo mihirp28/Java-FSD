@@ -1,0 +1,47 @@
+
+public class ExceptionsDemo {
+
+	
+static	int process()
+	{
+		try{
+			int x[]= {1};
+			System.out.println(10/x[0]);
+			
+		System.out.println("try");	
+		System.exit(0); // close the application
+		return 0;
+		}
+		
+		catch (ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
+			System.out.println("catch");
+			return -1;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return -2;
+		}
+		
+		//System.out.println("without finally");
+		
+		
+		  finally { 
+			  System.out.println("with finally"); 
+			  }
+		 
+
+	}
+	
+	public static void main(String[] args) {
+
+				/*
+		 * finally { System.out.println("finaly block"); //resource deallocate which
+		 * //gets executed irrespective of try or catch }
+		 */ 
+		
+		System.out.println(process());
+		
+	}
+
+}

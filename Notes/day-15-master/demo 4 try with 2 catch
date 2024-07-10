@@ -1,0 +1,31 @@
+
+// try , catch ,finally ,throw , throws
+
+// try should be imedtly flowd by catch or finally
+
+public class ExceptionsDemo {
+
+	public static void main(String[] args) {
+
+		try {
+	
+			int x[]= {1,2,0};
+			System.out.println("line 3 "+(10/x[5]));  
+		
+		}
+		catch (ArithmeticException e) {
+		e.printStackTrace();
+		
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+		e.printStackTrace();
+		
+		}
+
+		
+		System.out.println("line 1");
+		System.out.println("line 2");
+	
+	}
+
+}

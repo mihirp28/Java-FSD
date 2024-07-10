@@ -1,0 +1,59 @@
+package pack1;
+
+//parent comes b4 child ??
+//child inherits everything frm parent except private and constructor
+
+// inherit
+//invoking
+
+//super() must be the frst statemt in child const
+
+//final methods cannot be overridden
+
+class parent{
+
+	
+}
+
+class child extends parent{
+	
+}
+
+// for final var declared at instance level . 
+//either decalare and initilize at d same line or initilize in the constructor
+
+public class InhrtncDemo {
+
+	static int x;
+	public InhrtncDemo() {
+	//x=60;
+	}	
+
+	static {
+		System.out.println("static block 1");
+		x=10;
+	}
+	
+	static {
+		System.out.println("static block 2");
+		x=10;
+	}
+	
+
+	
+	public static void main(String[] args) {
+System.out.println("main");
+		System.out.println(x);
+	}
+
+
+}
+
+
+
+
+
+
+
+
+

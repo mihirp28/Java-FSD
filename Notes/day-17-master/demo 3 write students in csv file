@@ -1,0 +1,173 @@
+package pack2;
+
+public class Student {
+
+private	int rollNo;
+private	String name;
+private	int age;
+	
+public Student() {
+	// TODO Auto-generated constructor stub
+}
+
+public Student(int rollNo, String name, int age) {
+	super();
+	this.rollNo = rollNo;
+	this.name = name;
+	this.age = age;
+}
+
+public int getRollNo() {
+	return rollNo;
+}
+
+public void setRollNo(int rollNo) {
+	this.rollNo = rollNo;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public int getAge() {
+	return age;
+}
+
+public void setAge(int age) {
+	this.age = age;
+}
+
+@Override
+public String toString() {
+	return "Student [rollNo=" + rollNo + ", name=" + name + ", age=" + age + "]";
+}
+
+
+	
+}
+
+
+--------------------------dao (repository)
+
+package pack2;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class StudentDao {
+
+	public void saveStudents(Student[] students)
+	{
+		FileWriter out=null;
+		try {
+			
+			 out=new FileWriter("student.csv");
+			out.append("NAME,");
+			out.append("AGE,");
+			out.append("ROLL NO \n");
+			
+			for(Student stud:students)
+			{
+				out.append(stud.getName()+",");
+				out.append(stud.getAge()+",");
+				out.append(stud.getRollNo()+",");
+				out.append("\n");
+			}
+			
+			
+
+		}
+		catch (Exception e) {
+		e.printStackTrace();
+		}
+finally {
+	try {
+		out.flush();
+		out.close();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
+		
+	}
+	
+	
+}
+
+
+
+
+-------------------service
+
+
+package pack2;
+
+public interface StudentService {
+
+	void saveStudents(Student[] students);
+	
+	
+}
+
+
+---------------impl 
+
+
+
+package pack2;
+
+public class StudentServiceImpl implements StudentService{
+
+	StudentDao dao;
+
+
+	@Override
+	public void saveStudents(Student[] students) {
+		dao=new StudentDao();
+		dao.saveStudents(students);
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		Student student1=new Student(1, "Raj", 15);
+		Student student2=new Student(2, "Raju", 15);
+		Student student3=new Student(3, "Raja", 15);
+		Student student4=new Student(4, "Rajesh", 15);
+	
+	Student[] students=new Student[4];
+	
+	students[0]=student1;
+	students[1]=student2;
+	students[2]=student3;
+	students[3]=student4;
+	
+	
+	StudentService service=new StudentServiceImpl();
+	service.saveStudents(students);
+	
+		
+		
+	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

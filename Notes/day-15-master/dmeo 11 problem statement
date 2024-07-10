@@ -1,0 +1,27 @@
+
+public class ExceptionsDemo {
+
+	public static void main(String[] args) {
+
+		try{
+			System.out.println(10/0);
+		System.out.println("try");	
+		}
+		
+		catch (ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
+			System.out.println("catch");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		  finally { System.out.println("finaly block"); //resource deallocate which
+		 //gets executed irrespective of try or catch
+		  }
+		  
+		System.out.println("without finally");
+		
+	}
+
+}

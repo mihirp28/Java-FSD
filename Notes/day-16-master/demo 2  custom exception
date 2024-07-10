@@ -1,0 +1,71 @@
+
+public class TicketNotAvailableException extends Exception{
+
+	
+	String message;
+
+	public TicketNotAvailableException(String message) {
+		super(message);
+		this.message = message;
+	};
+	
+	
+}
+
+
+-----------------------
+
+
+public class BookMyShow {
+
+	static int ticketsAvailable=10;
+	
+	public void bookTicket(int noOfTickets)throws TicketNotAvailableException
+	{
+		if(noOfTickets < ticketsAvailable)
+		{
+			System.out.println("you booked "+noOfTickets+" tickets");
+			ticketsAvailable=ticketsAvailable-noOfTickets;
+		}
+		else
+		{
+			System.out.println("you r trying to book "+noOfTickets+" tickets but  the no of tickes available are "+ticketsAvailable);
+			throw new TicketNotAvailableException("the show is full");
+		}
+	}
+}
+
+
+--------------------
+
+
+
+public class BookMyShowService {
+
+	public static void main(String[] args) {
+
+		
+		BookMyShow show1=new BookMyShow();
+		BookMyShow show2=new BookMyShow();
+		BookMyShow show3=new BookMyShow();
+		
+		
+		try {
+		
+			show1.bookTicket(5);
+			show2.bookTicket(4);
+			show3.bookTicket(2);
+			
+			
+		} catch (TicketNotAvailableException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}
+
+
+

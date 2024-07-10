@@ -1,0 +1,41 @@
+
+//one memory is created 
+class Parent {
+		int a = 10;
+	
+	static int b = 20;
+void over()
+{
+System.out.println("parent");	
+}
+	
+	void disp()
+	{
+		System.out.println("disp "+a);
+	}
+}
+public class Child extends Parent {
+
+	@Override
+	void over()
+	{
+	System.out.println("child");	
+	}
+	
+	void rr()
+	{
+		
+		this.over();
+		super.over();
+		
+		a=50;
+			
+			System.out.println("child value "+a);
+	}
+	public static void main(String[] args)
+	{
+				new Child().rr();
+				new Parent().disp();
+				new Child().disp();
+	}
+}

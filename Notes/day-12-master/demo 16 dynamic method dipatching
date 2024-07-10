@@ -1,0 +1,65 @@
+package pack1;
+
+//abstract method is one without a body
+// abstract method can only be written in abstarct class
+//child class must override abstract methods of parent
+
+//abstract methods cannot be
+//private abstract
+//final abstract
+//static abstract->u cannot override a static method
+
+
+abstract class Animal{
+	abstract void move();
+
+}
+
+class Mover
+{
+	void animalMove(Animal animal)
+	{
+		animal.move();
+	}
+	
+}
+
+class Tiger extends Animal
+{
+
+	@Override
+	void move() {
+		System.out.println("Tiger Move");
+		
+	}
+	
+}
+
+class Monkey extends Animal
+{
+
+	@Override
+	void move() {
+		System.out.println("Monkey Move");
+		
+	}
+	
+}
+
+public class InhrtncDemo {	
+	public static void main(String[] args) {
+
+		Mover mover=new Mover();
+		Animal animal=new Tiger();
+		mover.animalMove(animal);
+	}
+}
+
+
+
+
+
+
+
+
+

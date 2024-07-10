@@ -1,0 +1,42 @@
+
+package pack1;
+
+//parent comes b4 child ??
+//child inherits everything frm parent except private and constructor
+
+// inherit
+//invoking
+
+//super() must be the frst statemt in child const
+
+
+class parent{
+public parent(int x) {
+System.out.println("parent def const");
+}
+	
+}
+
+class child extends parent{
+	
+	public child() {
+		super(20);
+		//super(10);//invoking parent constructor
+		System.out.println("child def const");
+		
+	}
+	
+	
+}
+
+
+public class InhrtncDemo {
+
+	public static void main(String[] args) {
+
+		//parent p=new parent();
+		child c=new child();
+	
+	}
+
+}

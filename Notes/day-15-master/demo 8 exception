@@ -1,0 +1,40 @@
+
+public class ExceptionsDemo {
+
+	public static void main(String[] args) {
+
+		try
+		{
+			String y=null;
+			int [] x= {2,5};
+			
+			//y.toUpperCase();
+			//System.out.println(10/x[3]);
+			System.out.println(10/0);
+		}
+
+
+		catch (ArithmeticException e) {
+		System.out.println("cannot div a number by zero");
+	
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("plz check the bonds of array");
+	
+		}
+		catch (NullPointerException e) {
+
+			System.out.println("y is null ");
+	
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+	
+		}
+//must be written at the end of catch list		
+
+		System.out.println("test line");
+		
+	}
+
+}

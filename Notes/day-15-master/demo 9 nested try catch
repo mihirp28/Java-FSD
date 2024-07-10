@@ -1,0 +1,29 @@
+
+public class ExceptionsDemo {
+
+	public static void main(String[] args) {
+
+		try{
+			String y=null;
+			int [] x= {2,5};
+			//y.toUpperCase();
+			try {
+			System.out.println(10/x[1]);
+			System.out.println(10/0);
+			}
+			catch (ArrayIndexOutOfBoundsException e) {
+				e.printStackTrace();
+			}
+		}
+		catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+		catch (ArithmeticException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("test line");
+		
+	}
+
+}

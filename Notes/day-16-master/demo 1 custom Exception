@@ -1,0 +1,57 @@
+
+
+public class InvalidMarksException extends Exception{
+
+	String message; 
+	
+
+	public InvalidMarksException(String message) {
+		super(message);
+		this.message = message;
+	}
+}
+
+
+-----------------------------------
+
+
+public class MarksEntry {
+
+	public void EnterMarks(int marks)throws InvalidMarksException
+	{
+		if(marks > 100 || marks < 0)
+		throw new InvalidMarksException("Invalid Marks");
+		
+		else
+			
+			System.out.println("Your score is "+marks);
+	}
+	
+	
+}
+
+
+---------------------------------------
+
+
+public class MarksEntryService {
+
+	public static void main(String[] args) {
+
+		
+		MarksEntry marksEntry=new MarksEntry();
+		
+		try {
+			marksEntry.EnterMarks(-90);
+			} 
+		catch (InvalidMarksException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("last line");
+		
+	}
+
+}
+
+

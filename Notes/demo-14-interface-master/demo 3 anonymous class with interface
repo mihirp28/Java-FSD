@@ -1,0 +1,49 @@
+// interface methods are abstract by def
+// interface methods are public by def
+
+// interface are used when non related classes wants to share the common behaviou
+// package : ?? collection of related classes
+
+
+// private 
+//protected 
+//default
+//public
+interface Flyer{
+	 void fly();//if def only package members can access it
+}
+
+
+class FindFlyer{
+	public FindFlyer(Flyer flyer) {
+		flyer.fly();
+	}
+}
+
+class Parrot implements Flyer
+{
+
+	@Override
+	public void fly() {
+System.out.println("parrot fly");		
+	}
+	
+}
+
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+	//	Flyer fly=new Parrot();
+		
+		
+		FindFlyer f=new FindFlyer(new Flyer() {
+			
+			@Override
+			public void fly() {
+				System.out.println("kite fly");
+			}
+		});
+				
+	}
+
+}
