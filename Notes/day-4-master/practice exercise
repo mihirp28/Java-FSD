@@ -1,0 +1,20 @@
+
+-> create a java program to accept 2 numbers from user , and perform the action as per the user cloice 
+-> provide the user a menu to add , substract , divide  or multiply the numbers given 
+
+--> expected output 
+
+plz enter 2 numbers 
+
+10 
+20
+
+Plz choice the operations to perform
++   for addition
+-  for substraction 
+/ for division
+* for multiplication
+
+*
+
+result of multiplication of  10 * 20  is 200

@@ -1,0 +1,65 @@
+
+//identifiers  : name given to class , variable of function
+
+// cannot contain blank space
+//  cannot contain start with a number
+// cannot be a key word (reserved words which has some special meaning)
+// cannot have a special char except $ and _
+// _ is usually used in final variables
+
+//JNC -> java naming conventions (rules)
+// class Begins with caps and follows camel case
+// function(Method) Begins with small and follows camel case
+// variable Begins with small and follows camel case
+// final variables ALL CAPS 
+
+// name of Instance must be same as the class name starting with small case char
+
+//NOTE: java doesn't give u garbage value 
+
+// variable have default values based on their type
+
+// integer ->  byte , short ,int , long = 0
+// decimal  ->  float , double = 0.0
+// boolean -> boolean = false
+//character  -> char = /u0000 ' '
+
+//types of vars in java
+
+//local  : loc vars dont have def values , and must be initilized b4 its use
+	
+// instance
+// class - static 
+
+public class Day3Demos {
+
+	int x;
+	void disp()
+	{
+		int myVar;	
+		myVar=50;
+		System.out.println("value of myVar is "+myVar);
+		
+		System.out.println(x);
+		
+		System.out.println("This is my Display functions");
+	}
+	
+	void abc()
+	{
+		System.out.println(x);
+		//System.out.println(myVar);
+		//error local vars can only be accessed where they are declared
+	}
+	
+	public static void main(String[] args) {
+
+		System.out.println("MAIN");
+
+		Day3Demos day3Demos=new Day3Demos();
+		
+		day3Demos.disp();
+		
+	}
+
+}

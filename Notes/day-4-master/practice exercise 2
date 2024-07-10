@@ -1,0 +1,11 @@
+		//->  10,50,800
+		
+		//-> write a java code to count the number of zeros at the tail of any given number
+		
+		
+		// 1050800
+		// div by 10  and get the rem as long as val is > 0
+		// div by 10  and get the que as long as val is > 0
+		
+		//now div the que and get d rem keep doing as long u find any rem not zero
+		
