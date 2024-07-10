@@ -1,0 +1,47 @@
+
+-> create a new dir in ur machine 
+
+-> get into that dir 
+
+-> right click git bash here 
+
+->type ssh-keygen
+
+
+-> it will generate a ssh key in c dive users go to the ssh.pub file open it with notepad
+
+-> copy the key 
+
+-> go to git 
+
+-> account preferences 
+
+-> ssh key
+
+-> paste the key in the text box add key 
+
+--> add the key 
+
+
+go to learning portal 
+
+-> sprint 2 practice 
+
+-> click on boiler plate
+
+-> u will be redirected to git lab
+
+-> click on fork project 
+
+-> once the project is forked 
+
+-> click clone -> copy ssh path
+
+
+--> come back to git bash 
+
+
+
+-> git clone PASTE_THE COPIED_URL_FOR_PROJECT
+ 
+

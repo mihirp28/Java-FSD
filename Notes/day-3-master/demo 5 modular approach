@@ -1,0 +1,54 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class MyCalc {
+
+	float dollar;
+	float amountInRupees;
+	float commission;
+	float amountToReturn;
+	
+	public float converter(float dollar) { 
+		return dollar*78;
+		}
+	
+	public void calculations(float dollarCalc){
+		dollar=dollarCalc;
+		amountInRupees= converter(dollar);
+	
+		if(amountInRupees < 1000){
+		commission=amountInRupees * 0.15f ;		
+		}
+		else{
+			commission=amountInRupees * 0.22f ;	
+		}
+		amountToReturn=amountInRupees-commission;
+		
+	}
+	
+	
+	void display(){
+		System.out.println("the given amount is $"+dollar);
+		System.out.println("Total amount converted in rupees is "+amountInRupees);
+		System.out.println(commission);
+		System.out.println(amountToReturn+"rs");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+		MyCalc calc=new MyCalc();
+		
+		calc.calculations(20f);
+		calc.display();
+		
+		
+	}
+}
+
+// 10% to 15
+// 20% to 22 
+
+//dollar rate changed for 76 - 78

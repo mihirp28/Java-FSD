@@ -1,0 +1,42 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class MyCalc {
+
+	/*
+	 *
+	 * public void converter(float dollar) { 
+	 * System.out.println(dollar * 76); }
+	 */
+	
+	public float converter(float dollar) { 
+		return dollar*76;
+		}
+	
+	public static void main(String[] args) {
+		
+		MyCalc calc=new MyCalc();
+		
+		/*
+		 * float dollar=10.5f; float result= calc.converter(dollar); float
+		 * commission=result * 0.1f ; float amountTOReturn=result-commission;
+		 * System.out.println("$"+dollar); System.out.println(result);
+		 * System.out.println(commission); System.out.println(amountTOReturn+"rs");
+		 */
+		
+		//JOptionPane.showMessageDialog(new JFrame(), result);
+		
+		int age=10;
+		
+		if(age > 18)
+		{
+			System.out.println("valid employee");
+		}
+		else
+		{
+			System.out.println("invalid employee");
+		}
+		
+	}
+}
+

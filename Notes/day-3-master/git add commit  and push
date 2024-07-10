@@ -1,0 +1,23 @@
+---------------------------after clone
+
+open sts
+file import -> maven
+->existing maven project into workspace
+-> chose the folder from the cloned dir 
+-> finish
+
+-> modify the code as per the requirement 
+
+-> run as junit to test ur code is correct or not 
+-> when all test cases pass 
+
+->open windows explorer get into the project dir which u modified  
+-> git bash here 
+
+-> git status   //this is optional 
+
+-> git add .   //to add the modified files
+
+-> git commit -a -m "solved"
+
+-> git push -u origin master

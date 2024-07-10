@@ -1,0 +1,48 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class MyCalc {
+
+	/*
+	 *
+	 * public void converter(float dollar) { 
+	 * System.out.println(dollar * 76); }
+	 */
+	
+	public float converter(float dollar) { 
+		return dollar*76;
+		}
+	
+	public static void main(String[] args) {
+		
+		//if the total converted amount < 1000rs commission is 10%
+		//if the total converted amount goes beyond 1000rs commission is 20%
+		
+		
+		
+		MyCalc calc=new MyCalc();
+		
+		float dollar=20f;
+		float result= calc.converter(dollar);
+		float commission=0;
+		if(result < 1000)
+		{
+		commission=result * 0.1f ;		
+		}
+		else
+		{
+			commission=result * 0.2f ;	
+		}
+		
+		
+		float amountTOReturn=result-commission;
+		System.out.println("$"+dollar);
+		System.out.println(result);
+		System.out.println(commission);
+		System.out.println(amountTOReturn+"rs");
+		
+		
+		//JOptionPane.showMessageDialog(new JFrame(), result);
+		
+	}
+}
