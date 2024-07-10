@@ -1,0 +1,30 @@
+
+//polymorphism : many forms
+// static ->
+//function overloading : if methods perform closely related task
+//						can be given same name 	
+
+//dynamic
+
+public class Day8Demos {
+
+	int sum(int x,int y){
+		return x+y;
+	}
+	int sum(int x,int y,int z){
+		return x+y+z;
+	}
+	int sum(int x,int y,int z,int a){
+		return x+y+z+a;
+	}
+	
+	public static void main(String[] args) {
+
+		Day8Demos d=new Day8Demos();
+		System.out.println(d.sum(10, 50,60,70));
+		System.out.println(d.sum(10, 50,60));
+		System.out.println(d.sum(10, 50));
+
+	}
+
+}

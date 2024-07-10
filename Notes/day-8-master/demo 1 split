@@ -1,0 +1,16 @@
+
+public class Day8Demos {
+
+	public static void main(String[] args) {
+
+		String data="welcome,to,the,world,of,java";
+		
+		String[] arr=data.split(",");
+		
+		
+		for(String mydata:arr)
+		System.out.println(mydata);
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+
+
+public class Day8Demos {
+
+	public static void main(String[] args) {
+
+		int x=10;
+		int y=20;
+		int sum=x+y;
+		
+		System.out.println("the sum of {"+x+ "} and {"+y+"} is {"+sum+"}");
+		
+		System.out.println("the sum is "+sum);
+		
+		String res=String.format("%d is the sum ", sum);
+		String res1=String.format("%d is the sum of %d and %d", sum,x,y);
+		String res3=String.format("sum of x{%d} and y{%d} is {%d}", x,y,sum);
+		
+		
+		System.out.println(res);
+		System.out.println(res1);
+		System.out.println(res3);
+		
+	}
+
+}
+
+
+
+
+
+
+

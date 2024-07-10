@@ -1,0 +1,62 @@
+
+
+public class Day8Demos {
+
+	int x;
+	public Day8Demos(int x){
+		this.x=x;
+	}
+	void disp(){
+		System.out.println("hello world "+x);
+	}
+		
+	static Byte abc;
+	static byte pqr;
+	public static void main(String[] args) {
+
+		System.out.println(abc);
+		System.out.println(pqr);
+		
+		
+		//System.out.println(args[0]);
+		
+		int x=Integer.parseInt(args[0]);
+		
+		Day8Demos d=new Day8Demos(x);
+		d.disp();
+		
+	}
+
+}
+
+// primitive
+//class
+// converting a premitive type to a class in boxing
+
+// to manipulate the preimitive types as Objects we use Wrapper classes
+
+/*
+ * byte -> Byte
+ * short -> Short
+ * int -Integer
+ * long -->Long
+ * float ->Float
+ * double -> Double
+ * char -> Character
+ * boolean -> Boolean
+ * 
+ */
+
+
+// which of the following is not a premitive type
+
+//byte
+//Short
+//int
+//long
+
+
+
+
+
+

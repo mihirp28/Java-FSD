@@ -1,0 +1,26 @@
+
+
+public class Day8Demos {
+
+	int x;
+	void init(){
+		x=50;
+	}
+	void disp(){
+		System.out.println("hello world "+x);
+	}
+		
+	public static void main(String[] args) {
+	//	new Day8Demos().init();
+		//new Day8Demos().disp();
+		
+		Day8Demos d1=new Day8Demos(); // d1.x=0
+		Day8Demos d2=new Day8Demos(); //d2.x=0
+		d1.init();// d1.x=50
+		d2.disp();// d2.x
+		
+		
+		
+	}
+
+}

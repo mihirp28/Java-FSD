@@ -1,0 +1,16 @@
+
+String replaceFirst(String data,char find,char replace){
+}
+
+--> Hello , l , k
+--> Heklo  
+
+String replacelast(String data,char find,char replace){
+}
+
+--> Hello , l , k
+--> Helko  
+
+String toggleCase(String data){
+}
+

@@ -1,0 +1,37 @@
+
+//polymorphism : many forms
+// static ->
+//function overloading : if methods perform closely related task
+//						can be given same name 	
+
+
+// signature : type , number and sequence of args
+//any one of dem must be different
+
+//return type : is not a concern when it comes to overloading
+
+
+//dynamic
+
+public class Day8Demos {
+
+	
+ int sum(int... x){
+System.out.println("fun called");
+	 int sum=0;
+	 for(int num:x)
+	 {
+		 sum=sum+num;
+	 }
+
+	 return sum;
+ }
+	
+	public static void main(String[] args) {
+
+		Day8Demos d=new Day8Demos();
+		System.out.println(d.sum(5,8,42,45));
+
+	}
+
+}
