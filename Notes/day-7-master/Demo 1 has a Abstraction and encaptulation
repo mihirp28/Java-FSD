@@ -1,0 +1,154 @@
+
+import java.util.Date;
+
+public class Employee {
+
+	private String empName;
+	private int empId;
+	private Date dob;
+
+	private Address address;
+
+
+	
+	
+	public Address getAddress() {
+	return address;
+}
+
+public void setAddress(Address address) {
+	this.address = address;
+}
+
+	void display()
+	{
+		System.out.println("Name  "+empName + "\nId "+empId + " \nDOB "+dob);
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+// right click - source - generate getters and setters
+	
+	public void setEmpName(String empName) {
+		
+		this.empName = empName;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		if(empId < 0)
+		{
+		
+		}
+		else {
+		this.empId = empId;
+			}
+		}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+	
+	
+	
+}
+
+// public -- everyone
+// private -- no one - only within the class
+// protected : child and package members
+// default : all package members 
+
+
+
+----------------------address 
+
+
+
+public class Address {
+
+	private int streetNo;
+	private String city;
+	private String state;
+	public int getStreetNo() {
+		return streetNo;
+	}
+	public void setStreetNo(int streetNo) {
+		this.streetNo = streetNo;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	
+	
+	public void displyAddress()
+	{
+		System.out.println("Street no "+streetNo+" city "+city+" state "+state);
+	}
+	
+}
+
+
+------------------------------service
+
+import java.util.Date;
+
+public class EmployeeService {
+
+	public static void main(String[] args) {
+		
+		Employee employee=new Employee();
+		
+		employee.setEmpName("Rohit");
+		employee.setEmpId(100);
+							// MM/dd/yyyy
+		employee.setDob(new Date("01/11/1998"));
+		
+		Address address=new Address();
+		address.setCity("Bangalore");
+		address.setState("Karnataka");
+		address.setStreetNo(101);
+		
+		
+		employee.setAddress(address);
+		
+		
+		employee.display();
+		employee.getAddress().displyAddress();
+		
+		Employee e1=new Employee();
+		
+		//System.out.println(e1.getEmpId());
+		
+		//e1.getAddress().displyAddress();
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

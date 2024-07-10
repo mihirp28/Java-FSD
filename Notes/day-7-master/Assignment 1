@@ -1,0 +1,33 @@
+-> create a libray class with the following attributes 
+   String LibrarianName
+   Address LibraryAddress
+   Book book 
+
+->displayLibraryDetails 
+
+ --> Address 
+city
+state
+
+-> displayAddress
+
+-> Book
+isbn 
+title
+author
+
+-> displayBookDetails
+
+
+------------write the Implementation class 
+to add and retrive library details like name , address and book within the libray
+
+
+
+
+
+
+
+
+
+

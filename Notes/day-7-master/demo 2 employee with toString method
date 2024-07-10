@@ -1,0 +1,135 @@
+import java.util.Date;
+
+public class Employee {
+
+	private String empName;
+	private int empId;
+	private Date dob;
+
+	private Address address;
+
+
+	
+	
+	public Address getAddress() {
+	return address;
+}
+
+public void setAddress(Address address) {
+	this.address = address;
+}
+
+
+	public String getEmpName() {
+		return empName;
+	}
+// right click - source - generate getters and setters
+	
+	public void setEmpName(String empName) {
+		
+		this.empName = empName;
+	}
+	
+
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", empId=" + empId + ", dob=" + dob + ", address=" + address + "]";
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		if(empId < 0)
+		{
+		
+		}
+		else {
+		this.empId = empId;
+			}
+		}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+	
+	
+	
+}
+
+------------------address
+
+
+public class Address {
+
+	private int streetNo;
+	private String city;
+	private String state;
+	public int getStreetNo() {
+		return streetNo;
+	}
+	public void setStreetNo(int streetNo) {
+		this.streetNo = streetNo;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	@Override
+	public String toString() {
+		return "Address [streetNo=" + streetNo + ", city=" + city + ", state=" + state + "]";
+	}
+	
+	
+	
+}
+
+
+-------------service
+
+
+
+import java.util.Date;
+
+public class EmployeeService {
+
+	public static void main(String[] args) {
+		
+		Employee employee=new Employee();
+		
+		employee.setEmpName("Rohit");
+		employee.setEmpId(100);
+							// MM/dd/yyyy
+		employee.setDob(new Date("01/11/1998"));
+		
+		Address address=new Address();
+		address.setCity("Bangalore");
+		address.setState("Karnataka");
+		address.setStreetNo(101);
+		
+		employee.setAddress(address);
+		
+		
+		
+		System.out.println(employee);
+		
+	}
+
+}
+
+
+
+

@@ -1,0 +1,77 @@
+
+public class Address {
+
+	private int streetNo;
+	private String city;
+	private String state;
+	public int getStreetNo() {
+		return streetNo;
+	}
+	public void setStreetNo(int streetNo) {
+		this.streetNo = streetNo;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	@Override
+	public String toString() {
+		return "Address [streetNo=" + streetNo + ", city=" + city + ", state=" + state + "]";
+	}
+	public Address(int streetNo, String city, String state) {
+		this.streetNo = streetNo;
+		this.city = city;
+		this.state = state;
+	}
+	
+	public Address() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}
+
+
+------------------------service
+
+
+
+import java.util.Date;
+
+// constructor  -> special method which has same name as the class
+// it is used to initilize the data members of a class
+
+
+public class EmployeeService {
+
+	public static void main(String[] args) {
+	
+		
+		/*
+		 * Address address=new Address(); address.setCity("bangalore");
+		 * address.setState("karnataka"); address.setStreetNo(101);
+		 */ 
+		
+		
+		Address address=new Address(102, "Mumbai", "Maharastra");
+		
+		
+		System.out.println(address);
+		
+	
+	}
+
+}
+
+
+
+
+

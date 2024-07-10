@@ -1,0 +1,57 @@
+
+//constructor is a special method used to initilize data members of a class
+// used to create Objects of the class
+// if a user doesn't create a constructor compiler create a constructor
+// every java class has a constructor
+// def constructor which has no args
+
+//has same name as class name 
+
+//white writing a constructor do not give any return type
+
+//def constructor has same access specifier as class 
+// (outer classes) class can only be public or default 
+//can a class be private ? only if its inner class
+
+//this keyword is used to resolve the conflict between local and instance variable
+
+//Cannot use this keyword in a static context
+ class ConstDemo {
+	
+	 int x;
+	 int y;
+	 ConstDemo()
+	 {
+				 
+		 x=50;
+		 y=50;
+	 }
+	 
+	 ConstDemo(int x,int y)
+	 {
+		 this.x=x;
+		 this.y=y;
+	 }
+	 
+	 
+	 void disp()
+	 {
+		 System.out.println(x+y);
+	 }
+
+	 void disp2()
+	 {
+		 System.out.println(x+y);
+	 }
+	 
+	public static void main(String[] args) {
+		
+		ConstDemo c=new ConstDemo(140,50);
+		ConstDemo c1=new ConstDemo();
+		c.disp();
+		c1.disp2();
+	}
+	
+	
+	
+}

@@ -1,0 +1,163 @@
+import java.util.Arrays;
+import java.util.Date;
+
+public class Employee {
+
+	private String empName;
+	private int empId;
+	private Date dob;
+
+	private Address[] addresses;
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(String empName, int empId, Date dob, Address[] addresses) {
+		super();
+		this.empName = empName;
+		this.empId = empId;
+		this.dob = dob;
+		this.addresses = addresses;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", empId=" + empId + ", dob=" + dob + ", addresses="
+				+ Arrays.toString(addresses) + "]";
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+
+	public Address[] getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(Address[] addresses) {
+		this.addresses = addresses;
+	}
+	
+	
+
+		
+	
+	
+}
+
+-------------------------addresses
+
+
+public class Address {
+
+	private int streetNo;
+	private String city;
+	private String state;
+	public int getStreetNo() {
+		return streetNo;
+	}
+	public void setStreetNo(int streetNo) {
+		this.streetNo = streetNo;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	@Override
+	public String toString() {
+		return "Address [streetNo=" + streetNo + ", city=" + city + ", state=" + state + "]";
+	}
+	public Address(int streetNo, String city, String state) {
+		this.streetNo = streetNo;
+		this.city = city;
+		this.state = state;
+	}
+	
+	public Address() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}
+
+
+--------------service
+
+
+import java.util.Date;
+
+import jdk.jfr.Percentage;
+
+// constructor  -> special method which has same name as the class
+// it is used to initilize the data members of a class
+
+
+public class EmployeeService {
+
+	public static void main(String[] args) {
+	
+		Address officeAddress=new Address(102, "pune", "Maharastra");
+		Address homeAddress=new Address(103, "Mumbai", "Maharastra");
+		Address premanentAddress=new Address(104, "Mumbai", "Maharastra");
+		Address tempAddress=new Address(105, "Bangalore", "Karnataka");
+		
+		
+		Address[] addresses=new Address[4];
+		
+		addresses[0]=officeAddress;
+		addresses[1]=homeAddress;
+		addresses[2]=premanentAddress;
+		addresses[3]=tempAddress;
+		
+	
+		Employee employee=new Employee("Raj", 5, new Date(), addresses);
+		System.out.println(employee);
+		
+		
+		Address[] adr=employee.getAddresses();
+		System.out.println(adr[0]);
+		System.out.println(adr[0].getCity());
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
