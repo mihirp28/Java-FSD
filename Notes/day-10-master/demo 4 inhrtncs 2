@@ -1,0 +1,30 @@
+
+//2 public classses cannot be created in one file
+//public class name and fule name must be same
+
+class Animal{
+	String name;
+}
+
+class Cat extends Animal
+{
+	
+}
+class Tiger extends Cat
+{
+
+	void printName()
+	{
+		System.out.println(name);
+	}
+}
+public class SciCalcService {
+
+	public static void main(String[] args) {
+
+		Tiger t=new Tiger();
+		t.name="tiger";
+		t.printName();
+	}
+
+}

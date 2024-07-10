@@ -1,0 +1,32 @@
+
+//2 public classses cannot be created in one file
+//public class name and fule name must be same
+
+
+//dynamic plymrphsm-> overriding 
+
+class Animal{
+
+	
+}
+
+class Cat extends Animal
+{
+	void move() {
+		System.out.println("CAT MOVES");
+	}
+	
+}
+class Tiger extends Cat
+{
+
+}
+public class SciCalcService {
+
+	public static void main(String[] args) {
+
+		Tiger t=new Tiger();
+		t.move();
+	}
+
+}

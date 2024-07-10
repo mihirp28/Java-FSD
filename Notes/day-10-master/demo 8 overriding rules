@@ -1,0 +1,49 @@
+
+//2 public classses cannot be created in one file
+//public class name and fule name must be same
+
+
+//dynamic plymrphsm-> overriding 
+//overriding: modifying the methods  of parent 
+
+// number , type ,seq  -> must be same 
+//return type ->  overriding return type must be same
+
+class Animal{
+
+	
+}
+
+class Cat extends Animal
+{
+	void move() {
+		System.out.println("CAT MOVES");
+	}
+	
+}
+class Tiger extends Cat{
+
+	@Override
+	//error : //return type ->  overriding return type must be same
+
+	int move() {	
+		System.out.println("TIGER MOVES"); 
+	return 0;
+	}
+	
+	void disp()
+	{
+		super.move();
+	}
+	
+}
+public class SciCalcService {
+
+	public static void main(String[] args) {
+
+		Tiger t=new Tiger();
+		t.move();
+		//t.disp();
+	}
+
+}

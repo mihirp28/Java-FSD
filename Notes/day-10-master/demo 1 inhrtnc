@@ -1,0 +1,79 @@
+
+
+public class SimpleCal {
+
+	public void add()
+	{
+		System.out.println("add method");
+	}
+	
+	public void sub()
+	{
+		System.out.println("sub method");
+	}
+	
+	
+	public void mul()
+	{
+		System.out.println("mul method");
+	}
+	
+	public void div()
+	{
+		System.out.println("div method");
+	}
+	
+	
+	
+}
+
+
+
+
+------------------------scicak
+
+
+
+// single inheritance -> class extending from only one class
+
+
+class parent
+{
+}
+
+public class SciCalc extends SimpleCal{
+
+	
+	public void sin()
+	{
+		System.out.println("sin method");
+	}
+	
+	public void cos()
+	{
+		System.out.println("cos method");
+	}
+	
+	
+	public void tan()
+	{
+		System.out.println("tan method");
+	}
+
+	
+}
+
+
+----main
+
+
+
+public class SciCalcService {
+
+	public static void main(String[] args) {
+
+		SciCalc sciCalc=new SciCalc();
+		sciCalc.add();
+	}
+
+}
